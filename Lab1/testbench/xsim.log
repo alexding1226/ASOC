@@ -1,0 +1,191 @@
+#-----------------------------------------------------------
+# xsim v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Mar 18 07:55:11 2024
+# Process ID: 3830
+# Current directory: /home/ubuntu/caravel-soc_fpga-lab/fsic-sim/fsic_fpga/rtl/user/testbench/tc
+# Command line: xsim -mode tcl -source {xsim.dir/tb_fsic_xelab/xsim_script.tcl}
+# Log file: /home/ubuntu/caravel-soc_fpga-lab/fsic-sim/fsic_fpga/rtl/user/testbench/tc/xsim.log
+# Journal file: /home/ubuntu/caravel-soc_fpga-lab/fsic-sim/fsic_fpga/rtl/user/testbench/tc/xsim.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 3892.692 MHz, CPU Physical cores: 2, Host memory: 19254 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_fsic_xelab/xsim_script.tcl
+# xsim {tb_fsic_xelab} -autoloadwcfg -tclbatch {log_wave.tcl}
+Time resolution is 1 ps
+open_wave_config /home/ubuntu/caravel-soc_fpga-lab/fsic-sim/fsic_fpga/rtl/user/testbench/tc/tb_fsic_xelab.wcfg
+WARNING: Simulation object /tb_fsic/dut/U_MPRJ_IO0/vccd1 was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_MPRJ_IO0/vccd2 was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_MPRJ_IO0/vssd1 was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/U_MPRJ_IO0/vssd2 was not found in the design.
+WARNING: Simulation object /tb_fsic/vccd1 was not found in the design.
+WARNING: Simulation object /tb_fsic/vccd2 was not found in the design.
+WARNING: Simulation object /tb_fsic/vssd1 was not found in the design.
+WARNING: Simulation object /tb_fsic/vssd2 was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/pre_rd_ptr_reg was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/as_up_tvalid_reg was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/as_aa_tvalid_reg was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/delaynext was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/pre_m_axis was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/as_up_tvalid_reg was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/pre_rd_ptr_reg was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/as_up_tvalid_reg was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/as_aa_tvalid_reg was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/delaynext was not found in the design.
+WARNING: Simulation object /tb_fsic/dut/AXIS_SW0/pre_m_axis was not found in the design.
+source log_wave.tcl
+## log_wave -quiet -verbose -recursive *
+## run all
+test008
+                 140=> soc POR Assert
+                 140=> fpga POR Assert
+                 140=> fpga reset Assert
+                 180=> soc POR De-Assert
+                 180=> fpga POR De-Assert
+                 220=> fpga reset De-Assert
+                 285=> fpga_as_to_is_init done
+                 325=> fpga_cfg_write : fpga_axi_awaddr=0000, fpga_axi_awvalid=1, fpga_axi_awready=1, fpga_axi_wdata=00000001, axi_wstrb=1, fpga_axi_wvalid=1, fpga_axi_wready=1
+                 525=> soc_is_cfg_write : wbs_adr=30003000, wbs_sel=0001, wbs_wdata=00000001
+                 965=> fpga_cfg_write : fpga_axi_awaddr=0000, fpga_axi_awvalid=1, fpga_axi_awready=1, fpga_axi_wdata=00000003, axi_wstrb=1, fpga_axi_wvalid=1, fpga_axi_wready=1
+                1125=> soc_is_cfg_write : wbs_adr=30003000, wbs_sel=0001, wbs_wdata=00000003
+                1365=> soc_is_user_proj_sel : wbs_adr=30005000, wbs_sel=0001, wbs_wdata=00000001
+                1605=> soc_up_cfg_write : wbs_adr=30000040, wbs_sel=0001, wbs_wdata=00000000
+                1845=> soc_up_cfg_write : wbs_adr=30000041, wbs_sel=0001, wbs_wdata=fffffff6
+                2085=> soc_up_cfg_write : wbs_adr=30000042, wbs_sel=0001, wbs_wdata=fffffff7
+                2325=> soc_up_cfg_write : wbs_adr=30000043, wbs_sel=0001, wbs_wdata=00000017
+                2565=> soc_up_cfg_write : wbs_adr=30000044, wbs_sel=0001, wbs_wdata=00000038
+                2805=> soc_up_cfg_write : wbs_adr=30000045, wbs_sel=0001, wbs_wdata=0000003f
+                3045=> soc_up_cfg_write : wbs_adr=30000046, wbs_sel=0001, wbs_wdata=00000038
+                3285=> soc_up_cfg_write : wbs_adr=30000047, wbs_sel=0001, wbs_wdata=00000017
+                3525=> soc_up_cfg_write : wbs_adr=30000048, wbs_sel=0001, wbs_wdata=fffffff7
+                3765=> soc_up_cfg_write : wbs_adr=30000049, wbs_sel=0001, wbs_wdata=fffffff6
+                4005=> soc_up_cfg_write : wbs_adr=3000004a, wbs_sel=0001, wbs_wdata=00000000
+                4245=> soc_up_cfg_write : wbs_adr=30000000, wbs_sel=0001, wbs_wdata=00000001
+                4245=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000001
+                4285=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000002
+                4325=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000003
+                4365=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000004
+                4405=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000005
+                4445=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000006
+                4485=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000007
+                4525=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000008
+                4565=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000009
+                4605=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000000a
+fpga_is_as_tdata=00000000, expected_data=00000000
+                5125=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=         0, fpga_is_as_tdata=00000000, expected = 00000000
+fpga_is_as_tdata=fffffff6, expected_data=fffffff6
+                5645=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=         1, fpga_is_as_tdata=fffffff6, expected = fffffff6
+fpga_is_as_tdata=ffffffe3, expected_data=ffffffe3
+                6165=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=         2, fpga_is_as_tdata=ffffffe3, expected = ffffffe3
+fpga_is_as_tdata=ffffffe7, expected_data=ffffffe7
+                6685=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=         3, fpga_is_as_tdata=ffffffe7, expected = ffffffe7
+fpga_is_as_tdata=00000023, expected_data=00000023
+                7205=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=         4, fpga_is_as_tdata=00000023, expected = 00000023
+fpga_is_as_tdata=0000009e, expected_data=0000009e
+                7725=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=         5, fpga_is_as_tdata=0000009e, expected = 0000009e
+fpga_is_as_tdata=00000151, expected_data=00000151
+                8245=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=         6, fpga_is_as_tdata=00000151, expected = 00000151
+fpga_is_as_tdata=0000021b, expected_data=0000021b
+                8765=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=         7, fpga_is_as_tdata=0000021b, expected = 0000021b
+fpga_is_as_tdata=000002dc, expected_data=000002dc
+                9285=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=         8, fpga_is_as_tdata=000002dc, expected = 000002dc
+fpga_is_as_tdata=00000393, expected_data=00000393
+                9805=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=         9, fpga_is_as_tdata=00000393, expected = 00000393
+test009
+               14785=> soc POR Assert
+               14785=> fpga POR Assert
+               14785=> fpga reset Assert
+               14825=> soc POR De-Assert
+               14825=> fpga POR De-Assert
+               14865=> fpga reset De-Assert
+               14925=> fpga_as_to_is_init done
+               14965=> fpga_cfg_write : fpga_axi_awaddr=0000, fpga_axi_awvalid=1, fpga_axi_awready=1, fpga_axi_wdata=00000001, axi_wstrb=1, fpga_axi_wvalid=1, fpga_axi_wready=1
+               15165=> soc_is_cfg_write : wbs_adr=30003000, wbs_sel=0001, wbs_wdata=00000001
+               15605=> fpga_cfg_write : fpga_axi_awaddr=0000, fpga_axi_awvalid=1, fpga_axi_awready=1, fpga_axi_wdata=00000003, axi_wstrb=1, fpga_axi_wvalid=1, fpga_axi_wready=1
+               15765=> soc_is_cfg_write : wbs_adr=30003000, wbs_sel=0001, wbs_wdata=00000003
+               16005=> soc_is_user_proj_sel : wbs_adr=30005000, wbs_sel=0001, wbs_wdata=00000001
+               16005=> fpga_axilite_write_req in address phase = 10000040 - tvalid
+               16045=> fpga_axilite_write_req in address phase = 10000040 - transfer
+               16045=> fpga_axilite_write_req in data phase = 00000000 - tvalid
+               16085=> fpga_axilite_write_req in data phase = 00000000 - transfer
+               16085=> fpga_axilite_write_req in address phase = 10000041 - tvalid
+               16125=> fpga_axilite_write_req in address phase = 10000041 - transfer
+               16125=> fpga_axilite_write_req in data phase = fffffff6 - tvalid
+               16165=> fpga_axilite_write_req in data phase = fffffff6 - transfer
+               16165=> fpga_axilite_write_req in address phase = 10000042 - tvalid
+               16205=> fpga_axilite_write_req in address phase = 10000042 - transfer
+               16205=> fpga_axilite_write_req in data phase = fffffff7 - tvalid
+               16245=> fpga_axilite_write_req in data phase = fffffff7 - transfer
+               16245=> fpga_axilite_write_req in address phase = 10000043 - tvalid
+               16285=> fpga_axilite_write_req in address phase = 10000043 - transfer
+               16285=> fpga_axilite_write_req in data phase = 00000017 - tvalid
+               16325=> fpga_axilite_write_req in data phase = 00000017 - transfer
+               16325=> fpga_axilite_write_req in address phase = 10000044 - tvalid
+               16365=> fpga_axilite_write_req in address phase = 10000044 - transfer
+               16365=> fpga_axilite_write_req in data phase = 00000038 - tvalid
+               16405=> fpga_axilite_write_req in data phase = 00000038 - transfer
+               16405=> fpga_axilite_write_req in address phase = 10000045 - tvalid
+               16445=> fpga_axilite_write_req in address phase = 10000045 - transfer
+               16445=> fpga_axilite_write_req in data phase = 0000003f - tvalid
+               16485=> fpga_axilite_write_req in data phase = 0000003f - transfer
+               16485=> fpga_axilite_write_req in address phase = 10000046 - tvalid
+               16525=> fpga_axilite_write_req in address phase = 10000046 - transfer
+               16525=> fpga_axilite_write_req in data phase = 00000038 - tvalid
+               16565=> fpga_axilite_write_req in data phase = 00000038 - transfer
+               16565=> fpga_axilite_write_req in address phase = 10000047 - tvalid
+               16605=> fpga_axilite_write_req in address phase = 10000047 - transfer
+               16605=> fpga_axilite_write_req in data phase = 00000017 - tvalid
+               16645=> fpga_axilite_write_req in data phase = 00000017 - transfer
+               16645=> fpga_axilite_write_req in address phase = 10000048 - tvalid
+               18805=> fpga_axilite_write_req in address phase = 10000048 - transfer
+               18805=> fpga_axilite_write_req in data phase = fffffff7 - tvalid
+               18845=> fpga_axilite_write_req in data phase = fffffff7 - transfer
+               18845=> fpga_axilite_write_req in address phase = 10000049 - tvalid
+               18885=> fpga_axilite_write_req in address phase = 10000049 - transfer
+               18885=> fpga_axilite_write_req in data phase = fffffff6 - tvalid
+               18925=> fpga_axilite_write_req in data phase = fffffff6 - transfer
+               18925=> fpga_axilite_write_req in address phase = 1000004a - tvalid
+               18965=> fpga_axilite_write_req in address phase = 1000004a - transfer
+               18965=> fpga_axilite_write_req in data phase = 00000000 - tvalid
+               19005=> fpga_axilite_write_req in data phase = 00000000 - transfer
+               19285=> soc_up_cfg_write : wbs_adr=30000000, wbs_sel=0001, wbs_wdata=00000001
+               19285=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000001
+               20245=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000002
+               20285=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000003
+               20325=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000004
+               20365=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000005
+               20405=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000006
+               20445=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000007
+               20485=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000008
+               20525=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 00000009
+               20565=> fpga_axis_req send data, fpga_as_is_tupsb = 00000, fpga_as_is_tstrb = 0000, fpga_as_is_tkeep = 0000, fpga_as_is_tlast = 0, fpga_as_is_tdata = 0000000a
+fpga_is_as_tdata=00000000, expected_data=00000000
+               22165=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=        10, fpga_is_as_tdata=00000000, expected = 00000000
+fpga_is_as_tdata=fffffff6, expected_data=fffffff6
+               22685=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=        11, fpga_is_as_tdata=fffffff6, expected = fffffff6
+fpga_is_as_tdata=ffffffe3, expected_data=ffffffe3
+               23205=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=        12, fpga_is_as_tdata=ffffffe3, expected = ffffffe3
+fpga_is_as_tdata=ffffffe7, expected_data=ffffffe7
+               23725=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=        13, fpga_is_as_tdata=ffffffe7, expected = ffffffe7
+fpga_is_as_tdata=00000023, expected_data=00000023
+               24245=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=        14, fpga_is_as_tdata=00000023, expected = 00000023
+fpga_is_as_tdata=0000009e, expected_data=0000009e
+               24765=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=        15, fpga_is_as_tdata=0000009e, expected = 0000009e
+fpga_is_as_tdata=00000151, expected_data=00000151
+               25285=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=        16, fpga_is_as_tdata=00000151, expected = 00000151
+fpga_is_as_tdata=0000021b, expected_data=0000021b
+               25805=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=        17, fpga_is_as_tdata=0000021b, expected = 0000021b
+fpga_is_as_tdata=000002dc, expected_data=000002dc
+               26325=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=        18, fpga_is_as_tdata=000002dc, expected = 000002dc
+fpga_is_as_tdata=00000393, expected_data=00000393
+               26845=> test001_up_soc_cfg [PASS] soc_to_fpga_axis_captured_count=        19, fpga_is_as_tdata=00000393, expected = 00000393
+=============================================================================================
+=============================================================================================
+=============================================================================================
+               31005=> Final result [PASS], check_cnt = 0020, error_cnt = 0000
+=============================================================================================
+=============================================================================================
+=============================================================================================
+$finish called at time : 31005 ns : File "/home/ubuntu/caravel-soc_fpga-lab/fsic-sim/fsic_fpga/rtl/user/testbench/tb_fsic.v" Line 452
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Mar 18 07:55:15 2024...
