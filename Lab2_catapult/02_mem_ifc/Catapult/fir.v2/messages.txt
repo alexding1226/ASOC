@@ -1,0 +1,176 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Branching solution 'fir.v2' at state 'new' (PRJ-2)
+fir.v2
+go libraries
+# Info: Starting transformation 'analyze' on solution 'fir.v2' (SOL-8)
+Front End called with arguments: -- /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/02_mem_ifc/fir.h (CIN-69)
+Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'fir.v2': elapsed time 4.56 seconds, memory usage 1554600kB, peak memory usage 1554600kB (SOL-9)
+
+# Messages from "go compile"
+
+# Info: Starting transformation 'compile' on solution 'fir.v2' (SOL-8)
+Generating synthesis internal form... (CIN-3)
+Found top design routine 'fir' specified by directive (CIN-52)
+Inlining member function 'fir::fir' on object '' (CIN-64)
+Synthesizing method 'fir::run' (CIN-13)
+Inlining member function 'fir::run' on object '' (CIN-64)
+Inlining routine 'operator>><19, true>' (CIN-14)
+Optimizing block '/fir' ... (CIN-4)
+INOUT port 'input' is only used as an input. (OPT-10)
+INOUT port 'coeffs' is only used as an input. (OPT-10)
+INOUT port 'coeff_addr' is only used as an input. (OPT-10)
+INOUT port 'output' is only used as an output. (OPT-11)
+# Info: Partition '/fir/constructor' is found empty and is optimized away. (OPT-12)
+Loop '/fir/run/SHIFT' iterated at most 8 times. (LOOP-2)
+Loop '/fir/run/MAC' iterated at most 8 times. (LOOP-2)
+Design 'fir' was read (SOL-1)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/02_mem_ifc/Catapult/fir.v2/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'fir.v2': elapsed time 4.03 seconds, memory usage 1554600kB, peak memory usage 1554600kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 31, Real ops = 5, Vars = 10 (SOL-21)
+
+# Messages from "go libraries"
+
+# Info: Starting transformation 'libraries' on solution 'fir.v2' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Completed transformation 'libraries' on solution 'fir.v2': elapsed time 0.58 seconds, memory usage 1554600kB, peak memory usage 1554600kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 31, Real ops = 5, Vars = 10 (SOL-21)
+
+# Messages from "go assembly"
+
+go assembly
+# Info: Starting transformation 'assembly' on solution 'fir.v2' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'fir.v2': elapsed time 0.38 seconds, memory usage 1554600kB, peak memory usage 1554600kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 32, Real ops = 6, Vars = 12 (SOL-21)
+
+# Messages from "go architect"
+
+directive set /fir/run/main -PIPELINE_INIT_INTERVAL 1
+/fir/run/main/PIPELINE_INIT_INTERVAL 1
+directive set /fir/run/SHIFT -UNROLL yes
+/fir/run/SHIFT/UNROLL yes
+directive set /fir/run/MAC -UNROLL yes
+/fir/run/MAC/UNROLL yes
+directive set /fir/coeffs -WORD_WIDTH 64
+/fir/coeffs/WORD_WIDTH 64
+go extract
+# Info: Starting transformation 'loops' on solution 'fir.v2' (SOL-8)
+Loop '/fir/run/SHIFT' is being fully unrolled (8 times). (LOOP-7)
+Loop '/fir/run/MAC' is being fully unrolled (8 times). (LOOP-7)
+Loop '/fir/run/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'fir.v2': elapsed time 0.37 seconds, memory usage 1554600kB, peak memory usage 1554600kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 50, Real ops = 10, Vars = 17 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'fir.v2' (SOL-8)
+Memory Resource '/fir/coeffs:rsc' (from var: coeffs) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 32 x 64). (MEM-4)
+# Info: Completed transformation 'memories' on solution 'fir.v2': elapsed time 0.20 seconds, memory usage 1554600kB, peak memory usage 1554600kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 43, Real ops = 10, Vars = 18 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'fir.v2' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'fir.v2': elapsed time 0.05 seconds, memory usage 1554600kB, peak memory usage 1554600kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 43, Real ops = 10, Vars = 18 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'fir.v2' (SOL-8)
+Design 'fir' contains '16' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'fir.v2': elapsed time 0.19 seconds, memory usage 1554600kB, peak memory usage 1554600kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 61, Real ops = 16, Vars = 23 (SOL-21)
+
+# Messages from "go allocate"
+
+# Info: Starting transformation 'allocate' on solution 'fir.v2' (SOL-8)
+Performing concurrent resource allocation and scheduling on '/fir/run' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+Prescheduled LOOP '/fir/run/main' (3 c-steps) (SCHD-7)
+Prescheduled LOOP '/fir/run/run:rlp' (1 c-steps) (SCHD-7)
+Prescheduled SEQUENTIAL '/fir/run' (total length 4 c-steps) (SCHD-8)
+# Info: Initial schedule of SEQUENTIAL '/fir/run': Latency = 2, Area (Datapath, Register, Total) = 6560.16, 1021.44, 7581.60 (CRAAS-11)
+At least one feasible schedule exists. (CRAAS-9)
+# Info: Final schedule of SEQUENTIAL '/fir/run': Latency = 2, Area (Datapath, Register, Total) = 2808.71, 1021.44, 3830.15 (CRAAS-12)
+Resource allocation and scheduling done. (CRAAS-2)
+Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'fir.v2': elapsed time 0.39 seconds, memory usage 1554600kB, peak memory usage 1554600kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 61, Real ops = 16, Vars = 23 (SOL-21)
+
+# Messages from "go schedule"
+
+# Info: Starting transformation 'schedule' on solution 'fir.v2' (SOL-8)
+Performing concurrent resource allocation and scheduling on '/fir/run' (CRAAS-1)
+Global signal 'input:rsc.rdy' added to design 'fir' for component 'input:rsci' (LIB-3)
+Global signal 'input:rsc.vld' added to design 'fir' for component 'input:rsci' (LIB-3)
+Global signal 'input:rsc.dat' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'input:rsc' (SCHD-46)
+Global signal 'coeffs:rsc.q' added to design 'fir' for component 'coeffs:rsci' (LIB-3)
+Global signal 'coeffs:rsc.re' added to design 'fir' for component 'coeffs:rsci' (LIB-3)
+Global signal 'coeffs:rsc.radr' added to design 'fir' for component 'coeffs:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'coeffs:rsc' (SCHD-46)
+Global signal 'coeff_addr:rsc.rdy' added to design 'fir' for component 'coeff_addr:rsci' (LIB-3)
+Global signal 'coeff_addr:rsc.vld' added to design 'fir' for component 'coeff_addr:rsci' (LIB-3)
+Global signal 'coeff_addr:rsc.dat' added to design 'fir' for component 'coeff_addr:rsci' (LIB-3)
+# Info: Creating buffer for wait controller for component 'coeff_addr:rsc' (SCHD-46)
+Global signal 'output:rsc.rdy' added to design 'fir' for component 'output:rsci' (LIB-3)
+Global signal 'output:rsc.vld' added to design 'fir' for component 'output:rsci' (LIB-3)
+Global signal 'output:rsc.dat' added to design 'fir' for component 'output:rsci' (LIB-3)
+Global signal 'coeffs.triosy.lz' added to design 'fir' for component 'coeffs.triosy:obj' (LIB-3)
+# Info: Loop '/fir/run/main' is pipelined with initiation interval 1 and no flushing (SCHD-43)
+Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'fir.v2': elapsed time 4.56 seconds, memory usage 1554600kB, peak memory usage 1554600kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 343, Real ops = 64, Vars = 214 (SOL-21)
+
+# Messages from "go dpfsm"
+
+# Info: Starting transformation 'dpfsm' on solution 'fir.v2' (SOL-8)
+Performing FSM extraction... (FSM-1)
+# Info: Completed transformation 'dpfsm' on solution 'fir.v2': elapsed time 1.17 seconds, memory usage 1554600kB, peak memory usage 1554600kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 269, Real ops = 84, Vars = 199 (SOL-21)
+
+# Messages from "go extract"
+
+# Info: Starting transformation 'instance' on solution 'fir.v2' (SOL-8)
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'fir.v2': elapsed time 1.54 seconds, memory usage 1554600kB, peak memory usage 1554600kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 269, Real ops = 84, Vars = 252 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'fir.v2' (SOL-8)
+Report written to file 'rtl.rpt'
+Generating scverify_top.cpp ()
+Generating SCVerify ccs_wrapper_fir.vhdl ()
+Netlist written to file 'rtl.vhdl' (NET-4)
+generate concat
+order file name is: rtl.vhdl_order.txt
+Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.vhd
+Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.vhd
+Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: ./rtl.vhdl
+Finished writing concatenated file: /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/02_mem_ifc/Catapult/fir.v2/concat_rtl.vhdl
+order file name is: rtl.vhdl_order_sim.txt
+Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.vhd
+Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.vhd
+Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Add dependent file: ./rtl.vhdl
+Finished writing concatenated simulation file: /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/02_mem_ifc/Catapult/fir.v2/concat_sim_rtl.vhdl
+Generating SCVerify testbench files
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+Generating SCVerify ccs_wrapper_fir.v ()
+Netlist written to file 'rtl.v' (NET-4)
+generate concat
+order file name is: rtl.v_order.txt
+Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: ./rtl.v
+Finished writing concatenated file: /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/02_mem_ifc/Catapult/fir.v2/concat_rtl.v
+order file name is: rtl.v_order_sim.txt
+Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: ./rtl.v
+Finished writing concatenated simulation file: /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/02_mem_ifc/Catapult/fir.v2/concat_sim_rtl.v
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'fir.v2': elapsed time 10.88 seconds, memory usage 1554600kB, peak memory usage 1554600kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 269, Real ops = 84, Vars = 199 (SOL-21)

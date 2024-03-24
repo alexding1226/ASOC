@@ -1,0 +1,15 @@
+{
+	"configurations": [
+		{
+			"name": "Linux",
+			"includePath": [
+				"/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2023.2_1-1065141/Mgc_home/shared/include"
+			],
+			"defines": [],
+			"compilerPath": "/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2023.2_1-1065141/Mgc_home/bin/g++",
+			"cppStandard": "c++11",
+			"intelliSenseMode": "gcc-x64"
+		}
+	],
+"version": 4
+}

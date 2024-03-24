@@ -1,0 +1,1176 @@
+//  Catapult Ultra Synthesis 2023.2/1059873 (Production Release) Mon Aug  7 10:54:31 PDT 2023
+//  
+//          Copyright (c) Siemens EDA, 1996-2023, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                   PROPERTY OF SIEMENS EDA OR ITS LICENSORS.
+//  
+//  Running on Linux r12016@cad40 3.10.0-1160.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v26.2_0.0, HLS_PKGS v26.2_0.0, 
+//                       SIF_TOOLKITS v26.2_0.0, SIF_XILINX v26.2_0.0, 
+//                       SIF_ALTERA v26.2_0.0, CCS_LIBS v26.2_0.0, 
+//                       CDS_PPRO v2023.1, CDS_DesignChecker v2023.2, 
+//                       CDS_OASYS v21.1_3.1, CDS_PSR v23.1_1.18, 
+//                       DesignPad v2.78_1.0
+//  
+//  Start time Sun Mar 24 15:31:19 2024
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log6933b02d0a65.0"
+solution file add ./lab2/lab1_fir/01_walkthrough_loops/fir.h
+# /INPUTFILES/1
+solution file add ./lab2/lab1_fir/01_walkthrough_loops/fir_tb.cpp
+# /INPUTFILES/2
+solution file set /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/01_walkthrough_loops/fir_tb.cpp -exclude true
+options set Input/TargetPlatform x86_64
+# x86_64
+go compile
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Creating project directory '/home/raid7_2/user12/r12016/asoc/Catapult_1/'. (PRJ-1)
+# Moving session transcript to file "/home/raid7_2/user12/r12016/asoc/catapult.log"
+# Front End called with arguments: -- /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/01_walkthrough_loops/fir.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 4.86 seconds, memory usage 1489076kB, peak memory usage 1489076kB (SOL-9)
+# Info: Starting transformation 'compile' on solution 'fir.v1' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(8): Found top design routine 'fir' specified by directive (CIN-52)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(13): Inlining member function 'fir::fir' on object '' (CIN-64)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Synthesizing method 'fir::run' (CIN-13)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Inlining member function 'fir::run' on object '' (CIN-64)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator>><19, true>' (CIN-14)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Optimizing block '/fir' ... (CIN-4)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): INOUT port 'input' is only used as an input. (OPT-10)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(20): INOUT port 'coeffs' is only used as an input. (OPT-10)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(21): INOUT port 'output' is only used as an output. (OPT-11)
+# Info: $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(13): Partition '/fir/constructor' is found empty and is optimized away. (OPT-12)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(24): Loop '/fir/run/SHIFT' iterated at most 8 times. (LOOP-2)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(31): Loop '/fir/run/MAC' iterated at most 8 times. (LOOP-2)
+# Design 'fir' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'fir.v1': elapsed time 4.00 seconds, memory usage 1489076kB, peak memory usage 1489076kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 28, Real ops = 5, Vars = 8 (SOL-21)
+flow run /SCVerify/launch_make ./scverify/Verify_orig_cxx_osci.mk {} SIMTOOL=osci sim
+# Making './scverify/Verify_orig_cxx_osci.mk {} SIMTOOL=osci sim'
+# Make utility invoked from '/home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1'
+#     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/bin/make -f ./scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/orig_cxx_osci'
+# mkdir -p scverify/orig_cxx_osci
+# ============================================
+# Compiling C++ file: ../../lab2/lab1_fir/01_walkthrough_loops/fir_tb.cpp
+# /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/dcs_gcc/usr/bin/g++ -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_SYSC  -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DCCS_MISMATCHED_OUTPUTS_ONLY -DDEADLOCK_DETECTION -std=gnu++11 -Wall -Wno-unknown-pragmas -Wno-unused-label -g -I. -I../.. -I. -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/src -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DSC_USE_STD_STRING  -c ../../lab2/lab1_fir/01_walkthrough_loops/fir_tb.cpp -o scverify/orig_cxx_osci/fir_tb.cpp.cxxts.o
+# ============================================
+# Linking executable
+# /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/dcs_gcc/usr/bin/g++  -static-libstdc++ -L/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/lib/Linux/gcc-10.3.0-64 -L/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/lib -L/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/lib/Linux/gcc-10.3.0-64 scverify/orig_cxx_osci/fir_tb.cpp.cxxts.o -Wl,-Bstatic -lsystemc -Wl,-Bdynamic -lpthread -o scverify/orig_cxx_osci/scverify_top
+#     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/bin/make -f ./scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim (BASIC-14)
+# ============================================
+# Simulating design
+# cd ../..; ./Catapult_1/fir.v1/scverify/orig_cxx_osci/scverify_top 
+# pass @   0:    1 ==    1 
+# pass @   1:   -4 ==   -4 
+# pass @   2:    2 ==    2 
+# pass @   3:    1 ==    1 
+# pass @   4:    0 ==    0 
+# pass @   5:   -6 ==   -6 
+# pass @   6:    7 ==    7 
+# pass @   7:   -3 ==   -3 
+# pass @   8:   -2 ==   -2 
+# pass @   9:    5 ==    5 
+# pass @  10:    7 ==    7 
+# pass @  11:    6 ==    6 
+# pass @  12:    5 ==    5 
+# pass @  13:   -1 ==   -1 
+# pass @  14:    4 ==    4 
+# pass @  15:   -5 ==   -5 
+# pass @  16:   13 ==   13 
+# pass @  17:  -15 ==  -15 
+# pass @  18:   12 ==   12 
+# pass @  19:   -4 ==   -4 
+# pass @  20:    4 ==    4 
+# pass @  21:    3 ==    3 
+# pass @  22:    1 ==    1 
+# pass @  23:   -2 ==   -2 
+# pass @  24:    0 ==    0 
+# pass @  25:  -10 ==  -10 
+# pass @  26:   -1 ==   -1 
+# pass @  27:   -5 ==   -5 
+# pass @  28:    6 ==    6 
+# pass @  29:    1 ==    1 
+# pass @  30:   -2 ==   -2 
+# pass @  31:   -6 ==   -6 
+# pass @  32:    3 ==    3 
+# pass @  33:  -14 ==  -14 
+# pass @  34:    3 ==    3 
+# pass @  35:   -3 ==   -3 
+# pass @  36:   -5 ==   -5 
+# pass @  37:   -3 ==   -3 
+# pass @  38:    6 ==    6 
+# pass @  39:  -13 ==  -13 
+# pass @  40:   -3 ==   -3 
+# pass @  41:   -9 ==   -9 
+# pass @  42:    2 ==    2 
+# pass @  43:   -8 ==   -8 
+# pass @  44:   11 ==   11 
+# pass @  45:   -4 ==   -4 
+# pass @  46:    6 ==    6 
+# pass @  47:    3 ==    3 
+# pass @  48:    2 ==    2 
+# pass @  49:    0 ==    0 
+# pass @  50:    9 ==    9 
+# pass @  51:    0 ==    0 
+# pass @  52:   -2 ==   -2 
+# pass @  53:   -9 ==   -9 
+# pass @  54:   -5 ==   -5 
+# pass @  55:   -1 ==   -1 
+# pass @  56:   -2 ==   -2 
+# pass @  57:   -6 ==   -6 
+# pass @  58:   -3 ==   -3 
+# pass @  59:   -2 ==   -2 
+# pass @  60:   -4 ==   -4 
+# pass @  61:   -3 ==   -3 
+# pass @  62:   11 ==   11 
+# pass @  63:   -5 ==   -5 
+# pass @  64:    8 ==    8 
+# pass @  65:  -12 ==  -12 
+# pass @  66:    3 ==    3 
+# pass @  67:    3 ==    3 
+# pass @  68:    2 ==    2 
+# pass @  69:    8 ==    8 
+# pass @  70:   -6 ==   -6 
+# pass @  71:   -4 ==   -4 
+# pass @  72:   -8 ==   -8 
+# pass @  73:    5 ==    5 
+# pass @  74:    2 ==    2 
+# pass @  75:    1 ==    1 
+# pass @  76:    3 ==    3 
+# pass @  77:    5 ==    5 
+# pass @  78:   -2 ==   -2 
+# pass @  79:   -3 ==   -3 
+# pass @  80:   -6 ==   -6 
+# pass @  81:    1 ==    1 
+# pass @  82:   -1 ==   -1 
+# pass @  83:   -5 ==   -5 
+# pass @  84:   11 ==   11 
+# pass @  85:   -7 ==   -7 
+# pass @  86:    7 ==    7 
+# pass @  87:   -5 ==   -5 
+# pass @  88:   -1 ==   -1 
+# pass @  89:    3 ==    3 
+# pass @  90:  -18 ==  -18 
+# pass @  91:   21 ==   21 
+# pass @  92:  -12 ==  -12 
+# pass @  93:    2 ==    2 
+# pass @  94:   -6 ==   -6 
+# pass @  95:    5 ==    5 
+# pass @  96:  -21 ==  -21 
+# pass @  97:   18 ==   18 
+# pass @  98:   -5 ==   -5 
+# pass @  99:    9 ==    9 
+# 
+# total pass count 100
+# total fail count 0
+flow run /CDesignChecker/query_user ./CDesignChecker/design_checker.sh
+flow run /CDesignChecker/write_options {VER_MODE Custom RULES {{-abr -severity error } {-abw -severity error } {-acc -severity warning } {-acs -severity warning } {-aic -severity warning } {-als -severity warning } {-aob -severity error } {-apt -severity info } {-awe -severity warning } {-cas -severity error } {-cbu -severity warning } {-ccc -severity warning } {-cgr -severity warning } {-cia -severity warning } {-cmc -severity info } {-cns -severity warning } {-cwb -severity warning } {-dbz -severity error } {-diu -severity warning } {-fvi -severity warning } {-fxd -severity warning } {-ise -severity error } {-lrc -severity info } {-mdb -severity warning } {-mxs -severity info } {-nco -severity warning } {-osa -severity warning } {-ovl -severity error } {-pdd -severity warning } {-riu -severity warning } {-rrt -severity error } {-sat -severity warning } {-stf -severity info } {-sud -severity warning } {-umr -severity error }}} 
+flow run /CDesignChecker/launch_sleccpc_sh ./CDesignChecker/design_checker.sh Custom 
+# Info: Using CDesignChecker installed at '/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/cds_cpc/rls'
+# Warning: Opening IPC...
+# Reading startup script '/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/cds_cpc/rls/slecrc' (APP-RSS)
+# > 
+# > 
+# 0
+# 
+# > 
+# 10000
+# 
+# > 
+# > 
+# 1
+# 
+# > 
+# 1
+# 
+# Warning: Generating SLEC wrappers and TCL script...
+# > 
+# -cat2slec_work_dir /home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/./CDesignChecker -workdir .. -cpc -symbolic_memory_threshold_size 256
+# 
+# > 
+# cat2slec debug information will be logged in "/home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/./CDesignChecker/cat2slec.debug". (CTS-CDFN)
+# SLEC process is using 63 MB, peak 67 MB, and 3 seconds [+63MB, +67MB, +3s] @ Sun Mar 24 15:39:29 2024 (UI-STATS)
+# 
+# Detected SLEC Version : SLEC 2023.2/ (CTS-SVI)
+# The tool command file will be written to "cat2slec.cmd". (CTS-CCFN)
+# Detected Catapult Version : 8.2 (CTS-CVI)
+# Extracting information for the block "fir::run". (CTS-ETN)
+#     ######################################################################
+#     Generating SystemC and RTL wrappers for the specified design
+#     ######################################################################
+# SPEC Wrapper file(s) is/are : "spec_wrapper.h spec_wrapper.cpp". (CTS-SWF)
+# SPEC Design top module name is now "spec_wrapper". (CTS-SWTMN)
+# Printing SPEC Wrapper files. (CTS-PSW)
+# SLEC process is using 68 MB, peak 73 MB, and 3 seconds [+5MB, +6MB, +0s] @ Sun Mar 24 15:39:29 2024 (UI-STATS)
+# 
+# Final SLEC script is generated at: /home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/CDesignChecker/run_design_checker.tcl (CTS-FSSN)
+# cat2slec is running via IPC from Catapult - not exiting TCL shell. (CTS-SFCI)
+# > 
+# 10000
+# 
+# > 
+# 1
+# 
+# > 
+# > 
+# Warning: Running CDesignChecker...
+# > 
+# 1
+# 
+# > 
+# 0
+# 
+# > 
+# Solver cache location set to 'workdir'. (SOL-SCL)
+# # # This file is automatically generated by Catapult each time CDesignChecker is
+# # # is launched from Catapult. Any user-applied edits will be overwritten.
+# # 
+# # set ::env(SLEC_GCC_HOME) /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/dcs_gcc/usr
+# # # Property checks
+# # 
+# # # add Verification Mode settings
+# # set_verification_mode -c_property_checks 
+# config_solver_clustering -enable  -engine StateCheck -max_size 20
+# Setting the currently running product to SLEC CPC. (APP-SCP)
+# set_global -if_unchanged orc_binary_sim                               1
+# set_global -if_unchanged print_slec_summary                           0
+# set_global -if_unchanged stop_at_first_falsification                  0
+# set_global -if_unchanged ctrl_c_unattended_mode                       1
+# set_global -if_unchanged generate_testbenches                         0
+# set_global -if_unchanged output_problem_time_limit                    1
+# set_global -if_unchanged ceg_generate_testbenches_for              spec
+# set_global -if_unchanged testbenches_dump_waveforms                   0
+# set_global -if_unchanged stop_solvers_after_num_falsifications        0
+# set_global -if_unchanged max_num_testbenches                          0
+# set_global -if_unchanged _enable_pragma_hls_exclude                   0
+# set_global -if_unchanged orc_generate_waveforms_for                spec
+# set_global -if_unchanged systemc_version                            2.3
+# set_global -if_unchanged sim_max_transactions                       200
+# set_global -if_unchanged __skip_collect_redundant_identity_nodes      1
+# set_global -if_unchanged soft_runtime_limit                        7200
+# set_global -if_unchanged find_invariants                              0
+# set_global -if_unchanged sim_based_validation_timeout               900
+# set_global -if_unchanged ceg_flat_sysc_tb                             1
+# set_global -if_unchanged output_problem_time_limit_factor           4.0
+# set_global -if_unchanged reduce_memory_exprs                          1
+# set_global -if_unchanged seq_perform_state_checks              only_bec
+# set_global -if_unchanged _enable_interim_pass_list                    1
+# set_global -if_unchanged ceg_generate_checkers                        0
+# set_global -if_unchanged number_of_ll3_iterations                     3
+# set_global -if_unchanged enable_hierarchy_synthesis                   1
+# Message "CEG-BSCI" is now disabled. (UI-MID)
+# Message "CEG-SCVER" is now disabled. (UI-MID)
+# config_trace_files -disable
+# # 
+# # # Clear all settings
+# # config_property_checks -disable -all
+# # # Enable rules
+# # config_property_checks -enable -abr -severity error 
+# # config_property_checks -enable -abw -severity error 
+# # config_property_checks -enable -acc -severity warning 
+# # config_property_checks -enable -acs -severity warning 
+# # config_property_checks -enable -aic -severity warning 
+# # config_property_checks -enable -als -severity warning 
+# # config_property_checks -enable -aob -severity error 
+# # config_property_checks -enable -apt -severity info 
+# # config_property_checks -enable -awe -severity warning 
+# # config_property_checks -enable -cas -severity error 
+# # config_property_checks -enable -cbu -severity warning 
+# # config_property_checks -enable -ccc -severity warning 
+# # config_property_checks -enable -cgr -severity warning 
+# # config_property_checks -enable -cia -severity warning 
+# # config_property_checks -enable -cmc -severity info 
+# # config_property_checks -enable -cns -severity warning 
+# # config_property_checks -enable -cwb -severity warning 
+# # config_property_checks -enable -dbz -severity error 
+# # config_property_checks -enable -diu -severity warning 
+# # config_property_checks -enable -fvi -severity warning 
+# # config_property_checks -enable -fxd -severity warning 
+# # config_property_checks -enable -ise -severity error 
+# # config_property_checks -enable -lrc -severity info 
+# # config_property_checks -enable -mdb -severity warning 
+# # config_property_checks -enable -mxs -severity info 
+# # config_property_checks -enable -nco -severity warning 
+# # config_property_checks -enable -osa -severity warning 
+# # config_property_checks -enable -ovl -severity error 
+# # config_property_checks -enable -pdd -severity warning 
+# # config_property_checks -enable -riu -severity warning 
+# # config_property_checks -enable -rrt -severity error 
+# # config_property_checks -enable -sat -severity warning 
+# # config_property_checks -enable -stf -severity info 
+# # config_property_checks -enable -sud -severity warning 
+# # config_property_checks -enable -umr -severity error 
+# # 
+# # # Symbolic Memory Control
+# # set_global symbolic_memory_threshold_size 256
+# # 
+# # # verification effort
+# # set_verification_effort -medium
+# set_global number_of_ll3_iterations 3
+# set_global soft_runtime_limit 7200
+# set_global output_problem_time_limit 1
+# set_global __sol_use_engine_time_limit_for_last_output 0
+# set_global sim_max_transactions 200
+# set_global sim_based_validation_timeout 900
+# set_global output_problem_time_limit_factor 4.0
+# # set_global report_undecided_solver_properties 1
+# # 
+# # 
+# ### Reading user-provided value '1' from the Tcl variable 'Run_Formal_Part_One'
+# ### Reading user-provided value '0' from the Tcl variable 'Run_Formal_Part_Two'
+# # # CDesignChecker Pre-build-design user options
+# Please refer to /home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/./CDesignChecker/calypto/build_design.log for a comprehensive list of messages and warnings issued in build_design. These may provide hints for debugging issues (if any) related to performance, potential out of bound accesses etc. (UI-BDLM)
+# 
+#                   (Subsequent repetitions of this message will be suppressed.
+#                    Use 'enable_msg UI-BDLM' to show all repetitions.)
+# 
+# Reading design files into the 'spec' design library. (CPT-RDF)
+# SystemC version 2.3 features will be used. (CPT-SC21)
+# Using GCC 10.3.0 to parse system function interfaces and STL. (CPT-UGV)
+# Finished reading SystemC files into the 'spec' design library. (CPT-FRD)
+# Linking the 'spec' design library. (CPT-LDF)
+# /home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/CDesignChecker/spec_wrapper.h(37): SC_MODULE class "spec_wrapper" identified as top module for C++ elaboration. (CPT-CETI)
+# Generating design_checks.db file. (CPT-DCD)
+# Generating design_checks.xml file. (CPT-OLX)
+# Generating design check reports. (CPT-OLT)
+# Found 'spec_wrapper' as the top module of the 'spec' design library. (CPT-FTH)
+# > 
+# 0
+# 
+# > 
+# 1
+# 
+# > 
+# Solver cache location set to 'workdir'. (SOL-SCL)
+# ### Reading user-provided value '1' from the Tcl variable '_Design_Already_Read'
+# ### Reading user-provided value '0' from the Tcl variable 'Run_Lint_Only'
+# ### Reading user-provided value '0' from the Tcl variable 'Run_Formal_Part_One'
+# ### Reading user-provided value '1' from the Tcl variable 'Run_Formal_Part_Two'
+# ### Reading user-provided value '0' from the Tcl variable 'Enable_DB_Flow'
+# ### Reading user-provided value '1' from the Tcl variable 'Induction_Depth'
+# Synthesizing the 'spec' design library. (CPT-STN)
+# Setting 'spec_wrapper' as the top module of the 'spec' design library. (CDB-STH)
+# Finished synthesizing the 'spec' design library. (CPT-FBD)
+# SLEC process is using 78 MB, peak 343 MB, and 24 seconds [-55MB, +0MB, +1s] @ Sun Mar 24 15:39:50 2024 (UI-STATS)
+# 
+# Saving the netlist database to 'design.db'. (CDB-WDF)
+# Warning: Port 'spec.rst' was not connected to any downstream logic, or the original logic has been optimized away. (CDB-PHNSL)
+# Warning: Constraint is applied to port 'spec.rst' which has no fanout. (TDB-PHNF)
+# Warning: Port 'spec.rst' was not connected to any downstream logic, or the original logic has been optimized away. (CDB-PHNSL)
+# Warning: Constraint is applied to port 'spec.rst' which has no fanout. (TDB-PHNF)
+# # # CDesignChecker user constraints
+# Warning: Could not find variable(s) 'spec.spec_wrapper::input::rdy'. Corresponding flop map(s) are skipped. (CTS-SVNF)
+#           Near matches: {} 0 
+# SLEC process is using 78 MB, peak 343 MB, and 24 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:50 2024 (UI-STATS)
+# 
+# Warning: No properties found in the designs to check. Check if appropriate property checking verification mode was used. (UI-GWM)
+# Could not find black box signature for module 'spec.input_ac_channel_read_ln26_bbox_7'. (CDB-BBWS)
+# Running full proof verification. (ORC-SPM)
+# Finished netlist transformations. (ORC-FPN)
+# SLEC process is using 78 MB, peak 343 MB, and 24 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:50 2024 (UI-STATS)
+# 
+# Warning: Unmapped black-box instances exist. Please refer to file '/home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/./CDesignChecker/calypto/bbox.log' for a complete list of unmapped black-box instances. (TDB-UBIE)
+# Warning: Unmapped ports for black-box instances exist. Please refer to file '/home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/./CDesignChecker/calypto/bbox.log' for a complete list of unmapped ports of black-box instances. (TDB-UBIP)
+# Bit-blasting the clock tree. (TA-BBCT)
+# SLEC process is using 78 MB, peak 343 MB, and 24 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:50 2024 (UI-STATS)
+# 
+# Started mapping the 'spec' and 'impl' designs. (PSS-SDM)
+# Warning: Unmapped output/blackbox-input ports have been disconnected by logic pruning and will not show up in any SLEC generated waveforms. Please refer to '/home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/./CDesignChecker/calypto/mapping.log' for the list of unmapped outputs. Please use the global setting 'set_global prune_unmapped_logic 0' to get SLEC to dump these ports in waveforms. (TDB-PUP)
+# Warning: Some flops have been removed by dead/unmapped logic pruning. Please refer to '/home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/./CDesignChecker/calypto/mapping.log' for the list of removed flops. (TDB-DRF)
+# Finished mapping the 'spec' and 'impl' designs. (PSS-FDM)
+# SLEC process is using 78 MB, peak 343 MB, and 24 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:50 2024 (UI-STATS)
+# 
+# Determining input clock domains. (TA-ACDD)
+# Setting clock ## Clock : _Ideal_Clk_ (Period : 100, Rising edge : 2, Falling edge : 52) is set on spec.clk on automatically inferred clock port 'spec.clk'. (TA-ADCA)
+# SLEC process is using 78 MB, peak 343 MB, and 24 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:50 2024 (UI-STATS)
+# 
+# Bit-blasting the clock tree. (TA-BBCT)
+# SLEC process is using 78 MB, peak 343 MB, and 24 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:50 2024 (UI-STATS)
+# 
+# Started processing of constraints and maps. (ORC-SPCM)
+# Unmapped ports/flops exist. Please refer to the file 'CDesignChecker/calypto/mapping.log' for the complete list of unmapped inputs, outputs and flops. (TDB-EUS)
+# If unmapped flops exist, explicitly specify flop maps or use the command "create_namemap_rule" to make SLEC infer flop maps based on flop names. (TDB-TNM)
+# Finished processing of constraints and maps. (ORC-FPCM)
+# SLEC process is using 78 MB, peak 343 MB, and 24 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:50 2024 (UI-STATS)
+# 
+# SLEC will invoke verification engines in the following sequence: SBV -> StateCheck -> HII -> HL3. Please see file 'CDesignChecker/calypto/.solver_progress.log' for further details. (ORC-PES)
+# Started processing reset. (ORC-SPR)
+# Warning: Port 'spec.rst' does not support 'x' values and will be set to '0' for reset sequence simulation (see global 'value_on_input_pins_during_reset'). (SIM-NOX)
+# Warning: Port 'spec.rst' does not support 'x' values and will be set to '0' for reset sequence simulation (see global 'value_on_input_pins_during_reset'). (SIM-NOX)
+# Warning: Port 'spec.rst' does not support 'x' values and will be set to '0' for reset sequence simulation (see global 'value_on_input_pins_during_reset'). (SIM-NOX)
+# Finished processing reset. For the list of reset-values, please refer to calypto/reset.log. (ORC-FPR)
+# SLEC process is using 78 MB, peak 343 MB, and 24 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:50 2024 (UI-STATS)
+# 
+# Simulation will attempt to find all mismatches within 200 transactions (see 'help sim_finds_only_earliest_mismatches' and 'help sim_max_transactions'). (SIM-FAM)
+# Simulation did not find any mismatches. (SIM-NMMF)
+# Finished performing simulation-based validation. (SIM-FSBV)
+# SLEC process is using 78 MB, peak 343 MB, and 24 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:50 2024 (UI-STATS)
+# 
+# Finished performing optimizations. (ORC-FSRAO)
+# SLEC process is using 78 MB, peak 343 MB, and 24 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:50 2024 (UI-STATS)
+# 
+# Started performing consistency checks in the spec and impl designs. (ORC-SCCIV)
+# Finished performing consistency checks in the spec and impl designs. (ORC-FCCIV)
+# SLEC process is using 78 MB, peak 343 MB, and 24 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:50 2024 (UI-STATS)
+# 
+# Starting to unroll the design to obtain outputs and flops for transaction 1. (ORC-UDM)
+# Starting to apply constraints for sequential analysis. (TDB-STAC)
+# Finished application of constraints for sequential analysis. (TDB-DAC)
+# SLEC process is using 78 MB, peak 343 MB, and 24 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:50 2024 (UI-STATS)
+# 
+# Finished performing optimization-enabled design unrolling. (CDBO-ODU)
+# SLEC process is using 78 MB, peak 343 MB, and 24 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:50 2024 (UI-STATS)
+# 
+# Finished unrolling design to obtain outputs and flops for transaction 1. (ORC-UDDM)
+# SLEC process is using 78 MB, peak 343 MB, and 24 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:50 2024 (UI-STATS)
+# 
+# Starting state checks to classify flops as inductive or non-inductive. (SEQ-SSCP)
+# Finished state checks to classify flops as inductive or non-inductive: 1 non-inductive, 0 inductive. (SEQ-DSCP)
+# SLEC process is using 78 MB, peak 479 MB, and 25 seconds [+0MB, +136MB, +1s] @ Sun Mar 24 15:39:51 2024 (UI-STATS)
+# 
+# Started normalizing spec and impl netlists for sequential analysis. (SEQ-PO1M)
+# Warning: Map application for intermediate/induct maps was sub-optimal for 1 maps. Please look at the .spec_redux.log file in the work directory for more details. (SEQ-SRFC)
+# Started optimizations on normalized netlist. (SEQ-SOX)
+# Finished optimizations on normalized netlist. (SEQ-FOX)
+# SLEC process is using 78 MB, peak 479 MB, and 25 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:51 2024 (UI-STATS)
+# 
+# Determined 1 to be the acyclic sequential depth of the normalized spec and impl netlists. (SEQ-ASD)
+# Finished normalizing spec and impl netlists for sequential analysis. (SEQ-O1M)
+# SLEC process is using 78 MB, peak 479 MB, and 25 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:51 2024 (UI-STATS)
+# 
+# Starting high-effort induct map init checks. (SEQ-SIIC)
+# Posing 1 induct map init check problems. (SEQ-NIIPP)
+# Current Solver Progress : 1 init_check problems proven, 0 falsified, 0 remaining : 15 seconds elapsed. (SEQ-SWTWP)
+# Finished high-effort induct map init checks. (SEQ-FIIC)
+# Overall Progress : 1 induct init check problems proven, 0 falsified, 0 remaining. (SEQ-OOP)
+# SLEC process is using 78 MB, peak 479 MB, and 26 seconds [+0MB, +0MB, +1s] @ Sun Mar 24 15:39:52 2024 (UI-STATS)
+# 
+# Starting sequential analysis (Engine L0). (SEQ-TTPS)
+# Finished sequential analysis (Engine L0). (SEQ-DTPS)
+# Finished sequential analysis. (ORC-FSA)
+# SLEC process is using 78 MB, peak 479 MB, and 26 seconds [+0MB, +0MB, +0s] @ Sun Mar 24 15:39:52 2024 (UI-STATS)
+# 
+# 
+# No problems were falsified.
+# 
+# 
+# Generating design_checks.db file. (CPT-DCD)
+# Generating design_checks.xml file. (CPT-OLX)
+# Generating design check reports. (CPT-OLT)
+# Summary of Design Checks.  (CPT-DCS)
+# ==================================================================================== 
+# *****************************Status of Property Checks******************************
+# ==================================================================================== 
+# 
+# 
+#                                                     Violated   Waived     Undecided     
+# ==================================================================================== 
+# FATAL                                               0          0          0             
+# ==================================================================================== 
+# 
+# ==================================================================================== 
+# ERROR                                               0          0          0             
+# ==================================================================================== 
+# 
+# ==================================================================================== 
+# WARNING                                             0          0          0             
+# ==================================================================================== 
+# 
+# ==================================================================================== 
+# INFO                                                0          0          0             
+# ==================================================================================== 
+# 
+# ==================================================================================== 
+# 
+# Warning: Closing IPC...
+solution library add nangate-45nm_beh -- -rtlsyntool DesignCompiler -vendor Nangate -technology 045nm
+go libraries
+# Info: Starting transformation 'libraries' on solution 'fir.v1' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/fpops.lib' [FPOPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_connections.lib' [ccs_connections]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/nangate/nangate-45nm_beh.lib' [nangate-45nm_beh]... (LIB-49)
+# Warning: Component library 'nangate-45nm_beh' created with a newer version of Catapult Library Builder, 2024.1/1059363 > 2023.2/1059873 (LIB-83)
+# Info: Completed transformation 'libraries' on solution 'fir.v1': elapsed time 0.96 seconds, memory usage 1488972kB, peak memory usage 1489076kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 28, Real ops = 5, Vars = 8 (SOL-21)
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# /CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+go extract
+# Info: Starting transformation 'assembly' on solution 'fir.v1' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'fir.v1': elapsed time 0.45 seconds, memory usage 1497228kB, peak memory usage 1497228kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 29, Real ops = 6, Vars = 10 (SOL-21)
+# Info: Starting transformation 'loops' on solution 'fir.v1' (SOL-8)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(24): Loop '/fir/run/SHIFT' is left rolled. (LOOP-4)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(31): Loop '/fir/run/MAC' is left rolled. (LOOP-4)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Loop '/fir/run/main' is left rolled. (LOOP-4)
+# Loop '/fir/run/MAC' is merged and folded into Loop 'SHIFT' (LOOP-9)
+# Info: Completed transformation 'loops' on solution 'fir.v1': elapsed time 0.79 seconds, memory usage 1497228kB, peak memory usage 1497228kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 32, Real ops = 7, Vars = 11 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'fir.v1' (SOL-8)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(20): I/O-Port Resource '/fir/coeffs:rsc' (from var: coeffs) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Completed transformation 'memories' on solution 'fir.v1': elapsed time 0.35 seconds, memory usage 1497228kB, peak memory usage 1497228kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 77, Real ops = 30, Vars = 21 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'fir.v1' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'fir.v1': elapsed time 0.04 seconds, memory usage 1497228kB, peak memory usage 1497228kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 77, Real ops = 30, Vars = 21 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'fir.v1' (SOL-8)
+# Design 'fir' contains '34' real operations. (SOL-11)
+# Warning: Extrapolation detected. Script '/home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/adjust_char_library.tcl' generated. (LIB-142)
+# Info: Completed transformation 'architect' on solution 'fir.v1': elapsed time 0.29 seconds, memory usage 1497228kB, peak memory usage 1497228kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 167, Real ops = 34, Vars = 43 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'fir.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/fir/run' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(24): Prescheduled LOOP '/fir/run/SHIFT' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Prescheduled LOOP '/fir/run/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Prescheduled LOOP '/fir/run/run:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Prescheduled SEQUENTIAL '/fir/run' (total length 10 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Initial schedule of SEQUENTIAL '/fir/run': Latency = 8, Area (Datapath, Register, Total) = 1496.75, 989.52, 2486.27 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Final schedule of SEQUENTIAL '/fir/run': Latency = 8, Area (Datapath, Register, Total) = 798.49, 989.52, 1788.01 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'fir.v1': elapsed time 0.50 seconds, memory usage 1497228kB, peak memory usage 1497228kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 167, Real ops = 34, Vars = 43 (SOL-21)
+# Info: Starting transformation 'schedule' on solution 'fir.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/fir/run' (CRAAS-1)
+# Global signal 'input:rsc.rdy' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Global signal 'input:rsc.vld' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Global signal 'input:rsc.dat' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Info: $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(26): Creating buffer for wait controller for component 'input:rsc' (SCHD-46)
+# Global signal 'coeffs:rsc.dat' added to design 'fir' for component 'coeffs:rsci' (LIB-3)
+# Info: $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(32): Creating buffer for wait controller for component 'coeffs:rsc' (SCHD-46)
+# Global signal 'output:rsc.rdy' added to design 'fir' for component 'output:rsci' (LIB-3)
+# Global signal 'output:rsc.vld' added to design 'fir' for component 'output:rsci' (LIB-3)
+# Global signal 'output:rsc.dat' added to design 'fir' for component 'output:rsci' (LIB-3)
+# Global signal 'coeffs.triosy.lz' added to design 'fir' for component 'coeffs.triosy:obj' (LIB-3)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'fir.v1': elapsed time 5.80 seconds, memory usage 1505420kB, peak memory usage 1505420kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 248, Real ops = 45, Vars = 107 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'fir.v1' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Info: Completed transformation 'dpfsm' on solution 'fir.v1': elapsed time 0.80 seconds, memory usage 1505420kB, peak memory usage 1505420kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 277, Real ops = 131, Vars = 107 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'fir.v1' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'fir.v1': elapsed time 1.15 seconds, memory usage 1505420kB, peak memory usage 1505420kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 275, Real ops = 126, Vars = 269 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'fir.v1' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Generating scverify_top.cpp
+# Generating SCVerify ccs_wrapper_fir.vhdl
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/concat_sim_rtl.vhdl
+# Generating SCVerify testbench files
+# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Generating SCVerify ccs_wrapper_fir.v
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/concat_sim_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'fir.v1': elapsed time 9.72 seconds, memory usage 1505420kB, peak memory usage 1505420kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 275, Real ops = 126, Vars = 107 (SOL-21)
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1'
+#     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/rtl_v_msim'
+# mkdir -p scverify/rtl_v_msim
+# ============================================
+# Setting up default modelsim.ini file from '/usr/mentor/Questa_Sim/cur/questasim/bin/../modelsim.ini'
+# cat "/usr/mentor/Questa_Sim/cur/questasim/bin/../modelsim.ini" >scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/mgc_hls'
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlib scverify/rtl_v_msim/mgc_hls
+# ============================================
+# Mapping logical library 'mgc_hls' to physical path '$SCVLIBS/scverify/rtl_v_msim/mgc_hls'
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vmap mgc_hls \$SCVLIBS/scverify/rtl_v_msim/mgc_hls
+# QuestaSim-64 vmap 2022.3_1 Lib Mapping Utility 2022.08 Aug 12 2022
+# vmap mgc_hls $SCVLIBS/scverify/rtl_v_msim/mgc_hls 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/work'
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlib scverify/rtl_v_msim/work
+# ============================================
+# Mapping logical library 'work' to physical path '$SCVLIBS/scverify/rtl_v_msim/work'
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vmap work \$SCVLIBS/scverify/rtl_v_msim/work
+# QuestaSim-64 vmap 2022.3_1 Lib Mapping Utility 2022.08 Aug 12 2022
+# vmap work $SCVLIBS/scverify/rtl_v_msim/work 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating Questa SIM wave TCL file 'scverify/rtl_v_msim/scverify_msim_wave.tcl' from 'scverify/ccs_wave_signals.dat'
+# /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/bin/tclsh8.5 /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/sif/userware/En_na/flows/app_questasim.flo create_wave_script ./Catapult_1/fir.v1/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult_1/fir.v1/.dut_inst_info.tcl ./Catapult_1/fir.v1/.qwave_signal 
+# app_questasim.flo - Executing command 'create_wave_script ./Catapult_1/fir.v1/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult_1/fir.v1/.dut_inst_info.tcl ./Catapult_1/fir.v1/.qwave_signal'...
+# Wrote Questa SIM waveform creation script to 'scverify/rtl_v_msim/scverify_msim_wave.tcl'
+# ============================================
+# Compiling Verilog file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work mgc_hls     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 15:46:29 on Mar 24,2024
+# vlog -work mgc_hls /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v 
+# -- Compiling module ccs_in_wait_v1
+# 
+# Top level modules:
+# 	ccs_in_wait_v1
+# End time: 15:46:30 on Mar 24,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work mgc_hls     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 15:46:30 on Mar 24,2024
+# vlog -work mgc_hls /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v 
+# -- Compiling module ccs_out_wait_v1
+# 
+# Top level modules:
+# 	ccs_out_wait_v1
+# End time: 15:46:30 on Mar 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work mgc_hls     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 15:46:30 on Mar 24,2024
+# vlog -work mgc_hls /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v 
+# -- Compiling module mgc_io_sync_v2
+# 
+# Top level modules:
+# 	mgc_io_sync_v2
+# End time: 15:46:31 on Mar 24,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work mgc_hls     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 15:46:31 on Mar 24,2024
+# vlog -work mgc_hls /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_v1.v 
+# -- Compiling module ccs_in_v1
+# 
+# Top level modules:
+# 	ccs_in_v1
+# End time: 15:46:31 on Mar 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: rtl.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work work     rtl.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 15:46:32 on Mar 24,2024
+# vlog -work work rtl.v 
+# -- Compiling module fir_run_run_fsm
+# -- Compiling module fir_run_staller
+# -- Compiling module fir_run_coeffs_triosy_obj_coeffs_triosy_wait_ctrl
+# -- Compiling module fir_run_output_rsci_output_wait_ctrl
+# -- Compiling module fir_run_input_rsci_input_wait_ctrl
+# -- Compiling module fir_run_coeffs_triosy_obj
+# -- Compiling module fir_run_output_rsci
+# -- Compiling module fir_run_input_rsci
+# -- Compiling module fir_run
+# -- Compiling module fir
+# 
+# Top level modules:
+# 	fir
+# End time: 15:46:32 on Mar 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: scverify/ccs_wrapper_fir.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work work     scverify/ccs_wrapper_fir.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 15:46:33 on Mar 24,2024
+# vlog -work work scverify/ccs_wrapper_fir.v 
+# -- Compiling module ccs_wrapper
+# 
+# Top level modules:
+# 	ccs_wrapper
+# End time: 15:46:33 on Mar 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../lab2/lab1_fir/01_walkthrough_loops/fir_tb.cpp
+# /usr/mentor/Questa_Sim/cur/questasim/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir -DCCS_DESIGN_FUNC_fir_run -DCCS_DESIGN_TOP_fir -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/src -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../lab2/lab1_fir/01_walkthrough_loops/fir_tb.cpp
+# Start time: 15:46:33 on Mar 24,2024
+# 
+# QuestaSim-64 sccom 2022.3_1 compiler 2022.08 Aug 12 2022
+# End time: 15:46:40 on Mar 24,2024, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/mc_testbench.cpp
+# /usr/mentor/Questa_Sim/cur/questasim/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir -DCCS_DESIGN_FUNC_fir_run -DCCS_DESIGN_TOP_fir -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/src -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/mc_testbench.cpp
+# Start time: 15:46:40 on Mar 24,2024
+# 
+# QuestaSim-64 sccom 2022.3_1 compiler 2022.08 Aug 12 2022
+# End time: 15:46:51 on Mar 24,2024, Elapsed time: 0:00:11
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/scverify_top.cpp
+# /usr/mentor/Questa_Sim/cur/questasim/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir -DCCS_DESIGN_FUNC_fir_run -DCCS_DESIGN_TOP_fir -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/src -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/scverify_top.cpp
+# Start time: 15:46:51 on Mar 24,2024
+# 
+# QuestaSim-64 sccom 2022.3_1 compiler 2022.08 Aug 12 2022
+# 
+# Exported modules:
+# 	scverify_top
+# ** Warning: (sccom-6102) The object "_data" is not debuggable. (/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include/mc_monitor.h, 144)
+# End time: 15:47:06 on Mar 24,2024, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 1
+# ============================================
+# Linking executable
+# /usr/mentor/Questa_Sim/cur/questasim/bin/sccom -link   
+# sccom -link 
+# Start time: 15:47:07 on Mar 24,2024
+# 
+# QuestaSim-64 sccom 2022.3_1 compiler 2022.08 Aug 12 2022
+# End time: 15:47:08 on Mar 24,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Optimizing design: scverify_top
+# cd ../..; /usr/mentor/Questa_Sim/cur/questasim/bin/vopt +acc=anpr    -L "./Catapult_1/fir.v1/scverify/rtl_v_msim/mgc_hls" -L "./Catapult_1/fir.v1/scverify/rtl_v_msim/work"   scverify_top  -o scverify_top_opt
+# QuestaSim-64 vopt 2022.3_1 Compiler 2022.08 Aug 12 2022
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Start time: 15:47:08 on Mar 24,2024
+# vopt "+acc=anpr" -L ./Catapult_1/fir.v1/scverify/rtl_v_msim/mgc_hls -L ./Catapult_1/fir.v1/scverify/rtl_v_msim/work scverify_top -o scverify_top_opt 
+# 
+# Top level modules:
+# 	scverify_top
+# 
+# Analyzing design...
+# -- Loading shared library /home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/scverify/rtl_v_msim/work/_sc/linux_x86_64_gcc-7.4.0/systemc.so
+# -- Loading systemc module /home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/scverify/rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '10 ns'
+# -- Loading module ccs_wrapper
+# -- Loading module fir
+# -- Loading module fir_run
+# -- Loading module ./Catapult_1/fir.v1/scverify/rtl_v_msim/mgc_hls.ccs_in_v1
+# -- Loading module fir_run_input_rsci
+# -- Loading module ./Catapult_1/fir.v1/scverify/rtl_v_msim/mgc_hls.ccs_in_wait_v1
+# -- Loading module fir_run_input_rsci_input_wait_ctrl
+# -- Loading module fir_run_output_rsci
+# -- Loading module ./Catapult_1/fir.v1/scverify/rtl_v_msim/mgc_hls.ccs_out_wait_v1
+# -- Loading module fir_run_output_rsci_output_wait_ctrl
+# -- Loading module fir_run_coeffs_triosy_obj
+# -- Loading module ./Catapult_1/fir.v1/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2
+# -- Loading module fir_run_coeffs_triosy_obj_coeffs_triosy_wait_ctrl
+# -- Loading module fir_run_staller
+# -- Loading module fir_run_run_fsm
+# Optimizing 15 design-units (inlining 0/15 module instances, 0/15 systemc instances):
+# -- Optimizing module fir_run(fast)
+# -- Optimizing module fir_run_run_fsm(fast)
+# -- Optimizing module ./Catapult_1/fir.v1/scverify/rtl_v_msim/mgc_hls.ccs_in_wait_v1(fast)
+# -- Optimizing module ./Catapult_1/fir.v1/scverify/rtl_v_msim/mgc_hls.ccs_out_wait_v1(fast)
+# -- Optimizing module fir_run_input_rsci(fast)
+# -- Optimizing module fir(fast)
+# -- Optimizing module ccs_wrapper(fast)
+# -- Optimizing module fir_run_output_rsci(fast)
+# -- Optimizing module fir_run_staller(fast)
+# -- Optimizing module fir_run_coeffs_triosy_obj(fast)
+# -- Optimizing module ./Catapult_1/fir.v1/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast)
+# -- Optimizing module fir_run_coeffs_triosy_obj_coeffs_triosy_wait_ctrl(fast)
+# -- Optimizing module fir_run_input_rsci_input_wait_ctrl(fast)
+# -- Optimizing module fir_run_output_rsci_output_wait_ctrl(fast)
+# -- Optimizing module ./Catapult_1/fir.v1/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2(fast)
+# Optimized design name is scverify_top_opt
+# End time: 15:47:10 on Mar 24,2024, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 1, Suppressed Warnings: 1
+#     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1'
+#     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# make: Nothing to be done for `build'.
+#     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)
+solution new -state new -solution fir.v1 fir
+# Info: Branching solution 'fir.v2' at state 'new' (PRJ-2)
+# fir.v2
+go libraries
+# Info: Starting transformation 'analyze' on solution 'fir.v2' (SOL-8)
+# Front End called with arguments: -- /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/01_walkthrough_loops/fir.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'fir.v2': elapsed time 4.95 seconds, memory usage 1570956kB, peak memory usage 1570956kB (SOL-9)
+# Info: Starting transformation 'compile' on solution 'fir.v2' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(8): Found top design routine 'fir' specified by directive (CIN-52)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(13): Inlining member function 'fir::fir' on object '' (CIN-64)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Synthesizing method 'fir::run' (CIN-13)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Inlining member function 'fir::run' on object '' (CIN-64)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator>><19, true>' (CIN-14)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Optimizing block '/fir' ... (CIN-4)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): INOUT port 'input' is only used as an input. (OPT-10)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(20): INOUT port 'coeffs' is only used as an input. (OPT-10)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(21): INOUT port 'output' is only used as an output. (OPT-11)
+# Info: $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(13): Partition '/fir/constructor' is found empty and is optimized away. (OPT-12)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(24): Loop '/fir/run/SHIFT' iterated at most 8 times. (LOOP-2)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(31): Loop '/fir/run/MAC' iterated at most 8 times. (LOOP-2)
+# Design 'fir' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v2/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'fir.v2': elapsed time 4.68 seconds, memory usage 1570956kB, peak memory usage 1570956kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 28, Real ops = 5, Vars = 8 (SOL-21)
+# Info: Starting transformation 'libraries' on solution 'fir.v2' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Completed transformation 'libraries' on solution 'fir.v2': elapsed time 0.49 seconds, memory usage 1570956kB, peak memory usage 1570956kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 28, Real ops = 5, Vars = 8 (SOL-21)
+go assembly
+# Info: Starting transformation 'assembly' on solution 'fir.v2' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'fir.v2': elapsed time 0.39 seconds, memory usage 1570956kB, peak memory usage 1570956kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 29, Real ops = 6, Vars = 10 (SOL-21)
+directive set /fir/run/main -PIPELINE_INIT_INTERVAL 1
+# /fir/run/main/PIPELINE_INIT_INTERVAL 1
+directive set /fir/run/SHIFT -UNROLL yes
+# /fir/run/SHIFT/UNROLL yes
+directive set /fir/run/MAC -UNROLL yes
+# /fir/run/MAC/UNROLL yes
+go allocate
+# Info: Starting transformation 'loops' on solution 'fir.v2' (SOL-8)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(24): Loop '/fir/run/SHIFT' is being fully unrolled (8 times). (LOOP-7)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(31): Loop '/fir/run/MAC' is being fully unrolled (8 times). (LOOP-7)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Loop '/fir/run/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'fir.v2': elapsed time 0.31 seconds, memory usage 1570956kB, peak memory usage 1570956kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 48, Real ops = 10, Vars = 15 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'fir.v2' (SOL-8)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(20): I/O-Port Resource '/fir/coeffs:rsc' (from var: coeffs) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Completed transformation 'memories' on solution 'fir.v2': elapsed time 0.15 seconds, memory usage 1570956kB, peak memory usage 1570956kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 41, Real ops = 10, Vars = 16 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'fir.v2' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'fir.v2': elapsed time 0.04 seconds, memory usage 1570956kB, peak memory usage 1570956kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 41, Real ops = 10, Vars = 16 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'fir.v2' (SOL-8)
+# Design 'fir' contains '16' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'fir.v2': elapsed time 0.19 seconds, memory usage 1570956kB, peak memory usage 1570956kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 59, Real ops = 16, Vars = 21 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'fir.v2' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/fir/run' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Prescheduled LOOP '/fir/run/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Prescheduled LOOP '/fir/run/run:rlp' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Prescheduled SEQUENTIAL '/fir/run' (total length 3 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Initial schedule of SEQUENTIAL '/fir/run': Latency = 1, Area (Datapath, Register, Total) = 6560.16, 357.50, 6917.67 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Final schedule of SEQUENTIAL '/fir/run': Latency = 1, Area (Datapath, Register, Total) = 2808.71, 357.50, 3166.21 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'fir.v2': elapsed time 0.33 seconds, memory usage 1570956kB, peak memory usage 1570956kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 59, Real ops = 16, Vars = 21 (SOL-21)
+go extract
+# Info: Starting transformation 'schedule' on solution 'fir.v2' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/fir/run' (CRAAS-1)
+# Global signal 'input:rsc.rdy' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Global signal 'input:rsc.vld' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Global signal 'input:rsc.dat' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Info: $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(26): Creating buffer for wait controller for component 'input:rsc' (SCHD-46)
+# Global signal 'coeffs:rsc.dat' added to design 'fir' for component 'coeffs:rsci' (LIB-3)
+# Info: $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(32): Creating buffer for wait controller for component 'coeffs:rsc' (SCHD-46)
+# Global signal 'output:rsc.rdy' added to design 'fir' for component 'output:rsci' (LIB-3)
+# Global signal 'output:rsc.vld' added to design 'fir' for component 'output:rsci' (LIB-3)
+# Global signal 'output:rsc.dat' added to design 'fir' for component 'output:rsci' (LIB-3)
+# Global signal 'coeffs.triosy.lz' added to design 'fir' for component 'coeffs.triosy:obj' (LIB-3)
+# Info: $PROJECT_HOME/lab2/lab1_fir/01_walkthrough_loops/fir.h(19): Loop '/fir/run/main' is pipelined with initiation interval 1 and no flushing (SCHD-43)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'fir.v2': elapsed time 4.05 seconds, memory usage 1570440kB, peak memory usage 1570956kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 206, Real ops = 42, Vars = 126 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'fir.v2' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Info: Completed transformation 'dpfsm' on solution 'fir.v2': elapsed time 0.55 seconds, memory usage 1570440kB, peak memory usage 1570956kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 161, Real ops = 54, Vars = 118 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'fir.v2' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'fir.v2': elapsed time 1.06 seconds, memory usage 1570440kB, peak memory usage 1570956kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 161, Real ops = 54, Vars = 156 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'fir.v2' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Generating scverify_top.cpp
+# Generating SCVerify ccs_wrapper_fir.vhdl
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v2/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v2/concat_sim_rtl.vhdl
+# Generating SCVerify testbench files
+# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Generating SCVerify ccs_wrapper_fir.v
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v2/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v2/concat_sim_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'fir.v2': elapsed time 9.47 seconds, memory usage 1635976kB, peak memory usage 1635976kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 161, Real ops = 54, Vars = 118 (SOL-21)
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v2'
+#     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/rtl_v_msim'
+# mkdir -p scverify/rtl_v_msim
+# ============================================
+# Setting up default modelsim.ini file from '/usr/mentor/Questa_Sim/cur/questasim/bin/../modelsim.ini'
+# cat "/usr/mentor/Questa_Sim/cur/questasim/bin/../modelsim.ini" >scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/mgc_hls'
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlib scverify/rtl_v_msim/mgc_hls
+# ============================================
+# Mapping logical library 'mgc_hls' to physical path '$SCVLIBS/scverify/rtl_v_msim/mgc_hls'
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vmap mgc_hls \$SCVLIBS/scverify/rtl_v_msim/mgc_hls
+# QuestaSim-64 vmap 2022.3_1 Lib Mapping Utility 2022.08 Aug 12 2022
+# vmap mgc_hls $SCVLIBS/scverify/rtl_v_msim/mgc_hls 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/work'
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlib scverify/rtl_v_msim/work
+# ============================================
+# Mapping logical library 'work' to physical path '$SCVLIBS/scverify/rtl_v_msim/work'
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vmap work \$SCVLIBS/scverify/rtl_v_msim/work
+# QuestaSim-64 vmap 2022.3_1 Lib Mapping Utility 2022.08 Aug 12 2022
+# vmap work $SCVLIBS/scverify/rtl_v_msim/work 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating Questa SIM wave TCL file 'scverify/rtl_v_msim/scverify_msim_wave.tcl' from 'scverify/ccs_wave_signals.dat'
+# /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/bin/tclsh8.5 /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/sif/userware/En_na/flows/app_questasim.flo create_wave_script ./Catapult_1/fir.v2/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult_1/fir.v2/.dut_inst_info.tcl ./Catapult_1/fir.v2/.qwave_signal 
+# app_questasim.flo - Executing command 'create_wave_script ./Catapult_1/fir.v2/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult_1/fir.v2/.dut_inst_info.tcl ./Catapult_1/fir.v2/.qwave_signal'...
+# Wrote Questa SIM waveform creation script to 'scverify/rtl_v_msim/scverify_msim_wave.tcl'
+# ============================================
+# Compiling Verilog file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work mgc_hls     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 16:53:07 on Mar 24,2024
+# vlog -work mgc_hls /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v 
+# -- Compiling module ccs_in_wait_v1
+# 
+# Top level modules:
+# 	ccs_in_wait_v1
+# End time: 16:53:07 on Mar 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work mgc_hls     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 16:53:08 on Mar 24,2024
+# vlog -work mgc_hls /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v 
+# -- Compiling module ccs_out_wait_v1
+# 
+# Top level modules:
+# 	ccs_out_wait_v1
+# End time: 16:53:08 on Mar 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work mgc_hls     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 16:53:09 on Mar 24,2024
+# vlog -work mgc_hls /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v 
+# -- Compiling module mgc_io_sync_v2
+# 
+# Top level modules:
+# 	mgc_io_sync_v2
+# End time: 16:53:09 on Mar 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work mgc_hls     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 16:53:09 on Mar 24,2024
+# vlog -work mgc_hls /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_v1.v 
+# -- Compiling module ccs_in_v1
+# 
+# Top level modules:
+# 	ccs_in_v1
+# End time: 16:53:09 on Mar 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: rtl.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work work     rtl.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 16:53:09 on Mar 24,2024
+# vlog -work work rtl.v 
+# -- Compiling module fir_run_run_fsm
+# -- Compiling module fir_run_staller
+# -- Compiling module fir_run_coeffs_triosy_obj_coeffs_triosy_wait_ctrl
+# -- Compiling module fir_run_output_rsci_output_wait_dp
+# -- Compiling module fir_run_output_rsci_output_wait_ctrl
+# -- Compiling module fir_run_input_rsci_input_wait_dp
+# -- Compiling module fir_run_input_rsci_input_wait_ctrl
+# -- Compiling module fir_run_coeffs_triosy_obj
+# -- Compiling module fir_run_output_rsci
+# -- Compiling module fir_run_input_rsci
+# -- Compiling module fir_run
+# -- Compiling module fir
+# 
+# Top level modules:
+# 	fir
+# End time: 16:53:10 on Mar 24,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: scverify/ccs_wrapper_fir.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work work     scverify/ccs_wrapper_fir.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 16:53:10 on Mar 24,2024
+# vlog -work work scverify/ccs_wrapper_fir.v 
+# -- Compiling module ccs_wrapper
+# 
+# Top level modules:
+# 	ccs_wrapper
+# End time: 16:53:10 on Mar 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../lab2/lab1_fir/01_walkthrough_loops/fir_tb.cpp
+# /usr/mentor/Questa_Sim/cur/questasim/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir -DCCS_DESIGN_FUNC_fir_run -DCCS_DESIGN_TOP_fir -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/src -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../lab2/lab1_fir/01_walkthrough_loops/fir_tb.cpp
+# Start time: 16:53:10 on Mar 24,2024
+# 
+# QuestaSim-64 sccom 2022.3_1 compiler 2022.08 Aug 12 2022
+# End time: 16:53:16 on Mar 24,2024, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/mc_testbench.cpp
+# /usr/mentor/Questa_Sim/cur/questasim/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir -DCCS_DESIGN_FUNC_fir_run -DCCS_DESIGN_TOP_fir -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/src -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/mc_testbench.cpp
+# Start time: 16:53:16 on Mar 24,2024
+# 
+# QuestaSim-64 sccom 2022.3_1 compiler 2022.08 Aug 12 2022
+# End time: 16:53:26 on Mar 24,2024, Elapsed time: 0:00:10
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/scverify_top.cpp
+# /usr/mentor/Questa_Sim/cur/questasim/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=fir -DCCS_DESIGN_FUNC_fir_run -DCCS_DESIGN_TOP_fir -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/src -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/scverify_top.cpp
+# Start time: 16:53:26 on Mar 24,2024
+# 
+# QuestaSim-64 sccom 2022.3_1 compiler 2022.08 Aug 12 2022
+# 
+# Exported modules:
+# 	scverify_top
+# ** Warning: (sccom-6102) The object "_data" is not debuggable. (/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include/mc_monitor.h, 144)
+# End time: 16:53:42 on Mar 24,2024, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 1
+# ============================================
+# Linking executable
+# /usr/mentor/Questa_Sim/cur/questasim/bin/sccom -link   
+# sccom -link 
+# Start time: 16:53:43 on Mar 24,2024
+# 
+# QuestaSim-64 sccom 2022.3_1 compiler 2022.08 Aug 12 2022
+# End time: 16:53:44 on Mar 24,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Optimizing design: scverify_top
+# cd ../..; /usr/mentor/Questa_Sim/cur/questasim/bin/vopt +acc=anpr    -L "./Catapult_1/fir.v2/scverify/rtl_v_msim/mgc_hls" -L "./Catapult_1/fir.v2/scverify/rtl_v_msim/work"   scverify_top  -o scverify_top_opt
+# QuestaSim-64 vopt 2022.3_1 Compiler 2022.08 Aug 12 2022
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Start time: 16:53:45 on Mar 24,2024
+# vopt "+acc=anpr" -L ./Catapult_1/fir.v2/scverify/rtl_v_msim/mgc_hls -L ./Catapult_1/fir.v2/scverify/rtl_v_msim/work scverify_top -o scverify_top_opt 
+# 
+# Top level modules:
+# 	scverify_top
+# 
+# Analyzing design...
+# -- Loading shared library /home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v2/scverify/rtl_v_msim/work/_sc/linux_x86_64_gcc-7.4.0/systemc.so
+# -- Loading systemc module /home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v2/scverify/rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '10 ns'
+# -- Loading module ccs_wrapper
+# -- Loading module fir
+# -- Loading module fir_run
+# -- Loading module ./Catapult_1/fir.v2/scverify/rtl_v_msim/mgc_hls.ccs_in_v1
+# -- Loading module fir_run_input_rsci
+# -- Loading module ./Catapult_1/fir.v2/scverify/rtl_v_msim/mgc_hls.ccs_in_wait_v1
+# -- Loading module fir_run_input_rsci_input_wait_ctrl
+# -- Loading module fir_run_input_rsci_input_wait_dp
+# -- Loading module fir_run_output_rsci
+# -- Loading module ./Catapult_1/fir.v2/scverify/rtl_v_msim/mgc_hls.ccs_out_wait_v1
+# -- Loading module fir_run_output_rsci_output_wait_ctrl
+# -- Loading module fir_run_output_rsci_output_wait_dp
+# -- Loading module fir_run_coeffs_triosy_obj
+# -- Loading module ./Catapult_1/fir.v2/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2
+# -- Loading module fir_run_coeffs_triosy_obj_coeffs_triosy_wait_ctrl
+# -- Loading module fir_run_staller
+# -- Loading module fir_run_run_fsm
+# Optimizing 17 design-units (inlining 0/17 module instances, 0/15 systemc instances):
+# -- Optimizing module fir_run(fast)
+# -- Optimizing module fir_run_input_rsci_input_wait_dp(fast)
+# -- Optimizing module fir_run_input_rsci(fast)
+# -- Optimizing module fir_run_run_fsm(fast)
+# -- Optimizing module fir_run_output_rsci(fast)
+# -- Optimizing module fir_run_output_rsci_output_wait_dp(fast)
+# -- Optimizing module ./Catapult_1/fir.v2/scverify/rtl_v_msim/mgc_hls.ccs_in_wait_v1(fast)
+# -- Optimizing module ./Catapult_1/fir.v2/scverify/rtl_v_msim/mgc_hls.ccs_out_wait_v1(fast)
+# -- Optimizing module fir_run_input_rsci_input_wait_ctrl(fast)
+# -- Optimizing module fir_run_output_rsci_output_wait_ctrl(fast)
+# -- Optimizing module fir(fast)
+# -- Optimizing module ccs_wrapper(fast)
+# -- Optimizing module fir_run_staller(fast)
+# -- Optimizing module fir_run_coeffs_triosy_obj(fast)
+# -- Optimizing module ./Catapult_1/fir.v2/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast)
+# -- Optimizing module fir_run_coeffs_triosy_obj_coeffs_triosy_wait_ctrl(fast)
+# -- Optimizing module ./Catapult_1/fir.v2/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2(fast)
+# Optimized design name is scverify_top_opt
+# End time: 16:53:47 on Mar 24,2024, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 1, Suppressed Warnings: 1
+#     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)
+quit
+# Saving project file '/home/raid7_2/user12/r12016/asoc/Catapult_1.ccs'. (PRJ-5)
+// Finish time Sun Mar 24 16:56:43 2024, time elapsed 1:25:24, peak memory 1.56GB, exit status 0

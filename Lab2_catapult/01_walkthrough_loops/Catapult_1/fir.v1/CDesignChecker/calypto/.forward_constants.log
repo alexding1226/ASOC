@@ -1,0 +1,81 @@
+-- FORWARD_CONSTANTS #  1 ---------------------------------------------------
+0 always-same-constant, 1 always-constant, 0 sometime-constant
+0 applied via ports, 0 discarded via ports 0 applied via edges, 0 discarded via edges
+UFT_STATS: -- FORWARD_CONSTANTS_#1 --
+           8 nodes
+          31 ports
+          10 edges
+          10 miter edges
+           0 normal edges
+          74 max slots
+          61 peak slots
+          12 total miters
+UFT_STATS: ------------------------------------------
+*** Statistics for __top__slec____0__ ***********
+       24 gates
+        1 flops
+NODE_STATS: -----Node Distribution Statistics----------------
+NODE_STATS:         F        UF       UFT
+NODE_STATS:         7         7         4 CPL_HIER
+NODE_STATS:         6         6         0 CPL_BBOX
+NODE_STATS:         3         3         0 CPL_BUF
+NODE_STATS:         1         1         1 CPL_FF
+NODE_STATS:         8         8         3 CPL_CONST
+NODE_STATS: -------------------------------------------------
+*************************************************
+-----------------------------------------------------------------------------
+
+-- FORWARD_CONSTANTS #  2 ---------------------------------------------------
+0 always-same-constant, 0 always-constant, 0 sometime-constant
+0 applied via ports, 0 discarded via ports 0 applied via edges, 0 discarded via edges
+UFT_STATS: -- FORWARD_CONSTANTS_#2 --
+           0 nodes
+          19 ports
+          21 edges
+          10 miter edges
+          11 normal edges
+         112 max slots
+          61 peak slots
+          23 total miters
+UFT_STATS: ------------------------------------------
+*** Statistics for __top__slec____0__ ***********
+       24 gates
+        1 flops
+NODE_STATS: -----Node Distribution Statistics----------------
+NODE_STATS:         F        UF       UFT
+NODE_STATS:         7         7         0 CPL_HIER
+NODE_STATS:         6         6         0 CPL_BBOX
+NODE_STATS:         3         3         0 CPL_BUF
+NODE_STATS:         1         1         0 CPL_FF
+NODE_STATS:         8         8         0 CPL_CONST
+NODE_STATS: -------------------------------------------------
+*************************************************
+-----------------------------------------------------------------------------
+
+-- FORWARD_CONSTANTS #  3 ---------------------------------------------------
+0 always-same-constant, 0 always-constant, 1 sometime-constant
+0 applied via ports, 0 discarded via ports 0 applied via edges, 0 discarded via edges
+UFT_STATS: -- FORWARD_CONSTANTS_#3 --
+           4 nodes
+          21 ports
+          21 edges
+          10 miter edges
+          11 normal edges
+         128 max slots
+          61 peak slots
+          23 total miters
+UFT_STATS: ------------------------------------------
+*** Statistics for __top__slec____0__ ***********
+       24 gates
+        1 flops
+NODE_STATS: -----Node Distribution Statistics----------------
+NODE_STATS:         F        UF       UFT
+NODE_STATS:         7         7         3 CPL_HIER
+NODE_STATS:         6         6         0 CPL_BBOX
+NODE_STATS:         3         3         0 CPL_BUF
+NODE_STATS:         1         1         0 CPL_FF
+NODE_STATS:         8         8         1 CPL_CONST
+NODE_STATS: -------------------------------------------------
+*************************************************
+-----------------------------------------------------------------------------
+

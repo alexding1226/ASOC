@@ -1,0 +1,199 @@
+# Invoking PAGXF in SeqMgr::Obtain1TUOptMachines during Unrolling
+# Invoking Function Analysis In PAGXF
+====================================================
+#  Inferring functional reductions 
+====================================================
+# of constants applied:        0
+# of partially constant edges: 0
+# of attempted equalities:     0
+# of applied equalities:       0
+# of applied word equalities:  0
+# of muxes optimized:          0
+# of word-level cuts appplied: 0
+# of bit-level cuts appplied:  0
+# of prunable edges found:     0
+# of pruned edges:             0
+# of BDD manager restarts:     0
+
+# Invoking Function Analysis For Equalities In PAGXF
+====================================================
+#  Inferring functional reductions 
+====================================================
+# of constants applied:        0
+# of partially constant edges: 0
+# of attempted equalities:     0
+# of applied equalities:       0
+# of applied word equalities:  0
+# of muxes optimized:          0
+# of word-level cuts appplied: 0
+# of bit-level cuts appplied:  0
+# of prunable edges found:     0
+# of pruned edges:             0
+# of BDD manager restarts:     0
+
+# Invoking PAGXF in SeqMgr::Obtain1TUOptMachines during Unrolling
+# Invoking Function Analysis In PAGXF
+====================================================
+#  Inferring functional reductions 
+====================================================
+# of constants applied:        0
+# of partially constant edges: 0
+# of attempted equalities:     0
+# of applied equalities:       0
+# of applied word equalities:  0
+# of muxes optimized:          0
+# of word-level cuts appplied: 0
+# of bit-level cuts appplied:  0
+# of prunable edges found:     0
+# of pruned edges:             0
+# of BDD manager restarts:     0
+
+# Invoking Function Analysis For Equalities In PAGXF
+====================================================
+#  Inferring functional reductions 
+====================================================
+# of constants applied:        0
+# of partially constant edges: 0
+# of attempted equalities:     0
+# of applied equalities:       0
+# of applied word equalities:  0
+# of muxes optimized:          0
+# of word-level cuts appplied: 0
+# of bit-level cuts appplied:  0
+# of prunable edges found:     0
+# of pruned edges:             0
+# of BDD manager restarts:     0
+
+# Invoking SeqUtil::PAGXF in SeqUtil::GetFlopsInTransitiveFaninRecursively
+# Invoking Function Analysis In PAGXF
+====================================================
+#  Inferring functional reductions 
+====================================================
+# of constants applied:        0
+# of partially constant edges: 0
+# of attempted equalities:     0
+# of applied equalities:       0
+# of applied word equalities:  0
+# of muxes optimized:          0
+# of word-level cuts appplied: 0
+# of bit-level cuts appplied:  3
+# of prunable edges found:     0
+# of pruned edges:             0
+# of BDD manager restarts:     0
+
+# Invoking Function Analysis For Equalities In PAGXF
+====================================================
+#  Inferring functional reductions 
+====================================================
+# of constants applied:        0
+# of partially constant edges: 0
+# of attempted equalities:     0
+# of applied equalities:       0
+# of applied word equalities:  0
+# of muxes optimized:          0
+# of word-level cuts appplied: 0
+# of bit-level cuts appplied:  3
+# of prunable edges found:     0
+# of pruned edges:             0
+# of BDD manager restarts:     0
+
+# Invoking SeqUtil::PAGXF in SeqUtil::GetFlopsInTransitiveFaninRecursively
+# Invoking Function Analysis In PAGXF
+====================================================
+#  Inferring functional reductions 
+====================================================
+# of constants applied:        0
+# of partially constant edges: 0
+# of attempted equalities:     0
+# of applied equalities:       0
+# of applied word equalities:  0
+# of muxes optimized:          0
+# of word-level cuts appplied: 0
+# of bit-level cuts appplied:  3
+# of prunable edges found:     0
+# of pruned edges:             0
+# of BDD manager restarts:     0
+
+# Invoking Function Analysis For Equalities In PAGXF
+====================================================
+#  Inferring functional reductions 
+====================================================
+# of constants applied:        0
+# of partially constant edges: 0
+# of attempted equalities:     0
+# of applied equalities:       0
+# of applied word equalities:  0
+# of muxes optimized:          0
+# of word-level cuts appplied: 0
+# of bit-level cuts appplied:  3
+# of prunable edges found:     0
+# of pruned edges:             0
+# of BDD manager restarts:     0
+
+# Invoking SeqMgr::Create1TUProductMachineNoFlops in SeqMgr::Create1TUProductMachine
+# Invoking PAGXF in SeqMgr::Create1TUProductMachineNoFlops 
+# Invoking Function Analysis In CDBOFlowBlind4Verify::Invoke_
+====================================================
+#  Inferring functional reductions 
+====================================================
+# of constants applied:        0
+# of partially constant edges: 0
+# of attempted equalities:     0
+# of applied equalities:       0
+# of applied word equalities:  0
+# of muxes optimized:          0
+# of word-level cuts appplied: 0
+# of bit-level cuts appplied:  4
+# of prunable edges found:     0
+# of pruned edges:             0
+# of BDD manager restarts:     0
+
+# Invoking Function Analysis For Equalities In CDBOFlowBlind4Verify::Invoke_
+====================================================
+#  Inferring functional reductions 
+====================================================
+# of constants applied:        0
+# of partially constant edges: 0
+# of attempted equalities:     0
+# of applied equalities:       0
+# of applied word equalities:  0
+# of muxes optimized:          0
+# of word-level cuts appplied: 0
+# of bit-level cuts appplied:  4
+# of prunable edges found:     0
+# of pruned edges:             0
+# of BDD manager restarts:     0
+
+# Invoking PAGXF in SeqMgr::HandleInductInitProblemsOn1TU
+# Invoking Function Analysis In PAGXF
+====================================================
+#  Inferring functional reductions 
+====================================================
+# of constants applied:        0
+# of partially constant edges: 0
+# of attempted equalities:     0
+# of applied equalities:       0
+# of applied word equalities:  0
+# of muxes optimized:          0
+# of word-level cuts appplied: 0
+# of bit-level cuts appplied:  0
+# of prunable edges found:     0
+# of pruned edges:             0
+# of BDD manager restarts:     0
+
+# Invoking Function Analysis For Equalities In PAGXF
+====================================================
+#  Inferring functional reductions 
+====================================================
+# of constants applied:        0
+# of partially constant edges: 0
+# of attempted equalities:     0
+# of applied equalities:       0
+# of applied word equalities:  0
+# of muxes optimized:          0
+# of word-level cuts appplied: 0
+# of bit-level cuts appplied:  0
+# of prunable edges found:     0
+# of pruned edges:             0
+# of BDD manager restarts:     0
+

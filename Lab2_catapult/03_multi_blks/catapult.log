@@ -1,0 +1,957 @@
+//  Catapult Ultra Synthesis 2023.2/1059873 (Production Release) Mon Aug  7 10:54:31 PDT 2023
+//  
+//          Copyright (c) Siemens EDA, 1996-2023, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                   PROPERTY OF SIEMENS EDA OR ITS LICENSORS.
+//  
+//  Running on Linux r12016@cad40 3.10.0-1160.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v26.2_0.0, HLS_PKGS v26.2_0.0, 
+//                       SIF_TOOLKITS v26.2_0.0, SIF_XILINX v26.2_0.0, 
+//                       SIF_ALTERA v26.2_0.0, CCS_LIBS v26.2_0.0, 
+//                       CDS_PPRO v2023.1, CDS_DesignChecker v2023.2, 
+//                       CDS_OASYS v21.1_3.1, CDS_PSR v23.1_1.18, 
+//                       DesignPad v2.78_1.0
+//  
+//  Start time Sun Mar 24 17:16:00 2024
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log1484902e54cc.0"
+solution file add ./top_tb.cpp
+# /INPUTFILES/1
+solution file add ./top.h
+# /INPUTFILES/2
+solution file add ./fir.h
+# /INPUTFILES/3
+solution file add ./decimator.h
+# /INPUTFILES/4
+solution file set /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/top_tb.cpp -exclude true
+go compile
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Creating project directory '/home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/'. (PRJ-1)
+# Moving session transcript to file "/home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/catapult.log"
+# Front End called with arguments: -- /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/decimator.h /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/fir.h /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/top.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# Error: /usr/include/gnu/stubs.h(7): cannot open source file "gnu/stubs-32.h" (CRD-1696)
+# Error: Compilation aborted (CIN-5)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 0.07 seconds, memory usage 1319812kB, peak memory usage 1319812kB (SOL-9)
+# Error: go analyze: Failed analyze
+options set Input/TargetPlatform x86_64
+# x86_64
+go compile
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Front End called with arguments: -- /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/decimator.h /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/fir.h /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/top.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# $PROJECT_HOME/top.h(23): Pragma 'hls_design<top>' detected on routine 'top::run' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 15.04 seconds, memory usage 1581956kB, peak memory usage 1581956kB (SOL-9)
+# Info: Starting transformation 'compile' on solution 'top.v1' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/top.h(9): Found top design routine 'top' specified by directive (CIN-52)
+# $PROJECT_HOME/top.h(20): Inlining member function 'top::top' on object '' (CIN-64)
+# $PROJECT_HOME/fir.h(17): Inlining member function 'fir::fir' on object '' (CIN-64)
+# $PROJECT_HOME/fir.h(23): Synthesizing method 'fir::run' (CIN-13)
+# $PROJECT_HOME/fir.h(23): Inlining member function 'fir::run' on object '' (CIN-64)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator>><19, true>' (CIN-14)
+# $PROJECT_HOME/fir.h(23): Optimizing block '/fir' ... (CIN-4)
+# $PROJECT_HOME/fir.h(23): INOUT port 'input' is only used as an input. (OPT-10)
+# $PROJECT_HOME/fir.h(24): INOUT port 'coeffs' is only used as an input. (OPT-10)
+# $PROJECT_HOME/fir.h(25): INOUT port 'output' is only used as an output. (OPT-11)
+# Info: $PROJECT_HOME/fir.h(17): Partition '/fir/constructor' is found empty and is optimized away. (OPT-12)
+# $PROJECT_HOME/fir.h(28): Loop '/fir/run/SHIFT' iterated at most 8 times. (LOOP-2)
+# $PROJECT_HOME/fir.h(35): Loop '/fir/run/MAC' iterated at most 8 times. (LOOP-2)
+# $PROJECT_HOME/top.h(20): Creating instance '/top/block0' of C Hierarchy 'fir' (CIN-204)
+# $PROJECT_HOME/top.h(20): Creating instance '/top/block1' of C Hierarchy 'fir' (CIN-204)
+# $PROJECT_HOME/decimator.h(17): Inlining member function 'decimator::decimator' on object '' (CIN-64)
+# $PROJECT_HOME/decimator.h(22): Synthesizing method 'decimator::run' (CIN-13)
+# $PROJECT_HOME/decimator.h(22): Inlining member function 'decimator::run' on object '' (CIN-64)
+# $PROJECT_HOME/decimator.h(22): Optimizing block '/decimator' ... (CIN-4)
+# $PROJECT_HOME/decimator.h(22): INOUT port 'din' is only used as an input. (OPT-10)
+# $PROJECT_HOME/decimator.h(23): INOUT port 'dout' is only used as an output. (OPT-11)
+# Info: $PROJECT_HOME/decimator.h(17): Partition '/decimator/constructor' is found empty and is optimized away. (OPT-12)
+# $PROJECT_HOME/top.h(20): Creating instance '/top/block2' of C Hierarchy 'decimator' (CIN-204)
+# $PROJECT_HOME/top.h(24): Synthesizing method 'top::run' (CIN-13)
+# $PROJECT_HOME/top.h(24): Inlining member function 'top::run' on object '' (CIN-64)
+# $PROJECT_HOME/top.h(24): Optimizing block '/top' ... (CIN-4)
+# $PROJECT_HOME/top.h(24): INOUT port 'din' is only used as an input. (OPT-10)
+# $PROJECT_HOME/top.h(25): INOUT port 'coeffs' is only used as an input. (OPT-10)
+# $PROJECT_HOME/top.h(26): INOUT port 'dout' is only used as an output. (OPT-11)
+# Info: $PROJECT_HOME/top.h(20): Partition '/top/constructor' is found empty and is optimized away. (OPT-12)
+# Design 'top' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Warning: Hierarchical design detected - SLEC-CPC does not support design with hierarchy
+# Info: CDesignChecker Shell script written to '/home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v1/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'top.v1': elapsed time 9.35 seconds, memory usage 1581956kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 53, Real ops = 6, Vars = 20 (SOL-21)
+solution library add nangate-45nm_beh -- -rtlsyntool DesignCompiler -vendor Nangate -technology 045nm
+solution library add ccs_sample_mem
+go libraries
+# Info: Starting transformation 'libraries' on solution 'top.v1' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/fpops.lib' [FPOPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_connections.lib' [ccs_connections]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/nangate/nangate-45nm_beh.lib' [nangate-45nm_beh]... (LIB-49)
+# Warning: Component library 'nangate-45nm_beh' created with a newer version of Catapult Library Builder, 2024.1/1059363 > 2023.2/1059873 (LIB-83)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_sample_mem.lib' [ccs_sample_mem]... (LIB-49)
+# Info: Completed transformation 'libraries' on solution 'top.v1': elapsed time 1.03 seconds, memory usage 1581956kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 53, Real ops = 6, Vars = 20 (SOL-21)
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# /CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+go assembly
+# Info: Starting transformation 'assembly' on solution 'top.v1' (SOL-8)
+# Info: $PROJECT_HOME/top.h(24): Partition '/top/run' is found empty and is optimized away. (OPT-12)
+# $PROJECT_HOME/top.h(25): Variable '/top/coeffs' connected to multiple blocks (ASM-35)
+# Info: Completed transformation 'assembly' on solution 'top.v1': elapsed time 0.98 seconds, memory usage 1581956kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 53, Real ops = 8, Vars = 23 (SOL-21)
+directive set /top/decimator/din:rsc -FIFO_DEPTH 0
+# /top/decimator/din:rsc/FIFO_DEPTH 0
+directive set /top/fir/input:rsc -FIFO_DEPTH 0
+# /top/fir/input:rsc/FIFO_DEPTH 0
+directive set /top/fir/coeffs:rsc -MAP_TO_MODULE {[DirectInput]}
+# /top/fir/coeffs:rsc/MAP_TO_MODULE {[DirectInput]}
+directive set /top/fir/output:rsc -FIFO_DEPTH 0
+# /top/fir/output:rsc/FIFO_DEPTH 0
+directive set /top/din:rsc -FIFO_DEPTH 0
+# /top/din:rsc/FIFO_DEPTH 0
+directive set /top/coeffs:rsc -MAP_TO_MODULE {[DirectInput]}
+# /top/coeffs:rsc/MAP_TO_MODULE {[DirectInput]}
+directive set /top/connect1:cns -FIFO_DEPTH 0
+# /top/connect1:cns/FIFO_DEPTH 0
+directive set /top/connect0:cns -FIFO_DEPTH 0
+# /top/connect0:cns/FIFO_DEPTH 0
+go extract
+# Info: Starting transformation 'loops' on solution 'top.v1' (SOL-8)
+# $PROJECT_HOME/decimator.h(22): Loop '/top/decimator/run/main' is left rolled. (LOOP-4)
+# $PROJECT_HOME/fir.h(28): Loop '/top/fir/run/SHIFT' is left rolled. (LOOP-4)
+# $PROJECT_HOME/fir.h(35): Loop '/top/fir/run/MAC' is left rolled. (LOOP-4)
+# $PROJECT_HOME/fir.h(23): Loop '/top/fir/run/main' is left rolled. (LOOP-4)
+# Loop '/top/fir/run/MAC' is merged and folded into Loop 'SHIFT' (LOOP-9)
+# Info: Completed transformation 'loops' on solution 'top.v1': elapsed time 0.80 seconds, memory usage 1581956kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 58, Real ops = 9, Vars = 26 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'top.v1' (SOL-8)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'din' (HIER-22)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'input' (HIER-22)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'output' (HIER-22)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'din' (HIER-22)
+# Info: Completed transformation 'memories' on solution 'top.v1': elapsed time 0.51 seconds, memory usage 1581956kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 100, Real ops = 32, Vars = 36 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'top.v1' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'top.v1': elapsed time 0.06 seconds, memory usage 1581956kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 100, Real ops = 32, Vars = 36 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'top.v1' (SOL-8)
+# Design 'top' contains '39' real operations. (SOL-11)
+# Warning: Extrapolation detected. Script '/home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v1/adjust_char_library.tcl' generated. (LIB-142)
+# Info: Completed transformation 'architect' on solution 'top.v1': elapsed time 0.43 seconds, memory usage 1581956kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 209, Real ops = 39, Vars = 59 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'top.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/top/decimator/run' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/decimator.h(22): Prescheduled LOOP '/top/decimator/run/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/decimator.h(22): Prescheduled LOOP '/top/decimator/run/run:rlp' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/decimator.h(22): Prescheduled SEQUENTIAL '/top/decimator/run' (total length 3 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/decimator.h(22): Initial schedule of SEQUENTIAL '/top/decimator/run': Latency = 1, Area (Datapath, Register, Total) = 26.59, 19.15, 45.74 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/decimator.h(22): Final schedule of SEQUENTIAL '/top/decimator/run': Latency = 1, Area (Datapath, Register, Total) = 13.23, 19.15, 32.38 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Performing concurrent resource allocation and scheduling on '/top/fir/run' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/fir.h(28): Prescheduled LOOP '/top/fir/run/SHIFT' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/fir.h(23): Prescheduled LOOP '/top/fir/run/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/fir.h(23): Prescheduled LOOP '/top/fir/run/run:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/fir.h(23): Prescheduled SEQUENTIAL '/top/fir/run' (total length 10 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/fir.h(23): Initial schedule of SEQUENTIAL '/top/fir/run': Latency = 9, Area (Datapath, Register, Total) = 1496.75, 989.52, 2486.27 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/fir.h(23): Final schedule of SEQUENTIAL '/top/fir/run': Latency = 8, Area (Datapath, Register, Total) = 798.49, 989.52, 1788.01 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'connect0' (HIER-22)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'connect1' (HIER-22)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'top.v1': elapsed time 0.73 seconds, memory usage 1581956kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 209, Real ops = 39, Vars = 59 (SOL-21)
+# Info: Starting transformation 'schedule' on solution 'top.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/top/decimator/run' (CRAAS-1)
+# Performing concurrent resource allocation and scheduling on '/top/fir/run' (CRAAS-1)
+# Global signal 'input:rsc.rdy' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Global signal 'input:rsc.vld' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Global signal 'input:rsc.dat' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Info: $PROJECT_HOME/fir.h(30): Creating buffer for wait controller for component 'input:rsc' (SCHD-46)
+# Global signal 'output:rsc.rdy' added to design 'fir' for component 'output:rsci' (LIB-3)
+# Global signal 'output:rsc.vld' added to design 'fir' for component 'output:rsci' (LIB-3)
+# Global signal 'output:rsc.dat' added to design 'fir' for component 'output:rsci' (LIB-3)
+# Global signal 'din:rsc.rdy' added to design 'decimator' for component 'din:rsci' (LIB-3)
+# Global signal 'din:rsc.vld' added to design 'decimator' for component 'din:rsci' (LIB-3)
+# Global signal 'din:rsc.dat' added to design 'decimator' for component 'din:rsci' (LIB-3)
+# Info: $PROJECT_HOME/decimator.h(27): Creating buffer for wait controller for component 'din:rsc' (SCHD-46)
+# Global signal 'dout:rsc.rdy' added to design 'decimator' for component 'dout:rsci' (LIB-3)
+# Global signal 'dout:rsc.vld' added to design 'decimator' for component 'dout:rsci' (LIB-3)
+# Global signal 'dout:rsc.dat' added to design 'decimator' for component 'dout:rsci' (LIB-3)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'top.v1': elapsed time 6.82 seconds, memory usage 1581956kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 334, Real ops = 50, Vars = 164 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'top.v1' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Info: Completed transformation 'dpfsm' on solution 'top.v1': elapsed time 1.13 seconds, memory usage 1581956kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 363, Real ops = 146, Vars = 168 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'top.v1' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'top.v1': elapsed time 1.91 seconds, memory usage 1581956kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 361, Real ops = 141, Vars = 341 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'top.v1' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Generating scverify_top.cpp
+# Generating SCVerify ccs_wrapper_top.vhdl
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v1/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v1/concat_sim_rtl.vhdl
+# Generating SCVerify testbench files
+# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Generating SCVerify ccs_wrapper_top.v
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v1/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v1/concat_sim_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'top.v1': elapsed time 11.04 seconds, memory usage 1581956kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 361, Real ops = 141, Vars = 168 (SOL-21)
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v1'
+#     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/rtl_v_msim'
+# mkdir -p scverify/rtl_v_msim
+# ============================================
+# Setting up default modelsim.ini file from '/usr/mentor/Questa_Sim/cur/questasim/bin/../modelsim.ini'
+# cat "/usr/mentor/Questa_Sim/cur/questasim/bin/../modelsim.ini" >scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/mgc_hls'
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlib scverify/rtl_v_msim/mgc_hls
+# ============================================
+# Mapping logical library 'mgc_hls' to physical path '$SCVLIBS/scverify/rtl_v_msim/mgc_hls'
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vmap mgc_hls \$SCVLIBS/scverify/rtl_v_msim/mgc_hls
+# QuestaSim-64 vmap 2022.3_1 Lib Mapping Utility 2022.08 Aug 12 2022
+# vmap mgc_hls $SCVLIBS/scverify/rtl_v_msim/mgc_hls 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/work'
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlib scverify/rtl_v_msim/work
+# ============================================
+# Mapping logical library 'work' to physical path '$SCVLIBS/scverify/rtl_v_msim/work'
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vmap work \$SCVLIBS/scverify/rtl_v_msim/work
+# QuestaSim-64 vmap 2022.3_1 Lib Mapping Utility 2022.08 Aug 12 2022
+# vmap work $SCVLIBS/scverify/rtl_v_msim/work 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating Questa SIM wave TCL file 'scverify/rtl_v_msim/scverify_msim_wave.tcl' from 'scverify/ccs_wave_signals.dat'
+# /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/bin/tclsh8.5 /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/sif/userware/En_na/flows/app_questasim.flo create_wave_script ./Catapult/top.v1/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult/top.v1/.dut_inst_info.tcl ./Catapult/top.v1/.qwave_signal 
+# app_questasim.flo - Executing command 'create_wave_script ./Catapult/top.v1/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult/top.v1/.dut_inst_info.tcl ./Catapult/top.v1/.qwave_signal'...
+# Wrote Questa SIM waveform creation script to 'scverify/rtl_v_msim/scverify_msim_wave.tcl'
+# ============================================
+# Compiling Verilog file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work mgc_hls     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 17:26:08 on Mar 24,2024
+# vlog -work mgc_hls /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v 
+# -- Compiling module ccs_in_wait_v1
+# 
+# Top level modules:
+# 	ccs_in_wait_v1
+# End time: 17:26:08 on Mar 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work mgc_hls     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 17:26:08 on Mar 24,2024
+# vlog -work mgc_hls /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v 
+# -- Compiling module ccs_out_wait_v1
+# 
+# Top level modules:
+# 	ccs_out_wait_v1
+# End time: 17:26:09 on Mar 24,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: rtl.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work work     rtl.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 17:26:09 on Mar 24,2024
+# vlog -work work rtl.v 
+# -- Compiling module fir_run_run_fsm
+# -- Compiling module fir_run_staller
+# -- Compiling module fir_run_output_rsci_output_wait_ctrl
+# -- Compiling module fir_run_input_rsci_input_wait_ctrl
+# -- Compiling module decimator_run_run_fsm
+# -- Compiling module decimator_run_staller
+# -- Compiling module decimator_run_dout_rsci_dout_wait_ctrl
+# -- Compiling module decimator_run_din_rsci_din_wait_ctrl
+# -- Compiling module fir_run_output_rsci
+# -- Compiling module fir_run_input_rsci
+# -- Compiling module decimator_run_dout_rsci
+# -- Compiling module decimator_run_din_rsci
+# -- Compiling module fir_run
+# -- Compiling module decimator_run
+# -- Compiling module fir
+# -- Compiling module decimator
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 17:26:09 on Mar 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: scverify/ccs_wrapper_top.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work work     scverify/ccs_wrapper_top.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 17:26:09 on Mar 24,2024
+# vlog -work work scverify/ccs_wrapper_top.v 
+# -- Compiling module ccs_wrapper
+# 
+# Top level modules:
+# 	ccs_wrapper
+# End time: 17:26:09 on Mar 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../top_tb.cpp
+# /usr/mentor/Questa_Sim/cur/questasim/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=top -DCCS_DESIGN_FUNC_top_run -DCCS_DESIGN_TOP_top -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/src -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../top_tb.cpp
+# Start time: 17:26:09 on Mar 24,2024
+# 
+# QuestaSim-64 sccom 2022.3_1 compiler 2022.08 Aug 12 2022
+# End time: 17:26:14 on Mar 24,2024, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/mc_testbench.cpp
+# /usr/mentor/Questa_Sim/cur/questasim/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=top -DCCS_DESIGN_FUNC_top_run -DCCS_DESIGN_TOP_top -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/src -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/mc_testbench.cpp
+# Start time: 17:26:14 on Mar 24,2024
+# 
+# QuestaSim-64 sccom 2022.3_1 compiler 2022.08 Aug 12 2022
+# End time: 17:26:23 on Mar 24,2024, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/scverify_top.cpp
+# /usr/mentor/Questa_Sim/cur/questasim/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=top -DCCS_DESIGN_FUNC_top_run -DCCS_DESIGN_TOP_top -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/src -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/scverify_top.cpp
+# Start time: 17:26:23 on Mar 24,2024
+# 
+# QuestaSim-64 sccom 2022.3_1 compiler 2022.08 Aug 12 2022
+# 
+# Exported modules:
+# 	scverify_top
+# ** Warning: (sccom-6102) The object "_data" is not debuggable. (/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include/mc_monitor.h, 144)
+# End time: 17:26:38 on Mar 24,2024, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 1
+# ============================================
+# Linking executable
+# /usr/mentor/Questa_Sim/cur/questasim/bin/sccom -link   
+# sccom -link 
+# Start time: 17:26:38 on Mar 24,2024
+# 
+# QuestaSim-64 sccom 2022.3_1 compiler 2022.08 Aug 12 2022
+# End time: 17:26:39 on Mar 24,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Optimizing design: scverify_top
+# cd ../..; /usr/mentor/Questa_Sim/cur/questasim/bin/vopt +acc=anpr    -L "./Catapult/top.v1/scverify/rtl_v_msim/mgc_hls" -L "./Catapult/top.v1/scverify/rtl_v_msim/work"   scverify_top  -o scverify_top_opt
+# QuestaSim-64 vopt 2022.3_1 Compiler 2022.08 Aug 12 2022
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Start time: 17:26:39 on Mar 24,2024
+# vopt "+acc=anpr" -L ./Catapult/top.v1/scverify/rtl_v_msim/mgc_hls -L ./Catapult/top.v1/scverify/rtl_v_msim/work scverify_top -o scverify_top_opt 
+# 
+# Top level modules:
+# 	scverify_top
+# 
+# Analyzing design...
+# -- Loading shared library /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v1/scverify/rtl_v_msim/work/_sc/linux_x86_64_gcc-7.4.0/systemc.so
+# -- Loading systemc module /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v1/scverify/rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '10 ns'
+# -- Loading module ccs_wrapper
+# -- Loading module top
+# -- Loading module fir
+# -- Loading module fir_run
+# -- Loading module fir_run_input_rsci
+# -- Loading module ./Catapult/top.v1/scverify/rtl_v_msim/mgc_hls.ccs_in_wait_v1
+# -- Loading module fir_run_input_rsci_input_wait_ctrl
+# -- Loading module fir_run_output_rsci
+# -- Loading module ./Catapult/top.v1/scverify/rtl_v_msim/mgc_hls.ccs_out_wait_v1
+# -- Loading module fir_run_output_rsci_output_wait_ctrl
+# -- Loading module fir_run_staller
+# -- Loading module fir_run_run_fsm
+# -- Loading module decimator
+# -- Loading module decimator_run
+# -- Loading module decimator_run_din_rsci
+# -- Loading module decimator_run_din_rsci_din_wait_ctrl
+# -- Loading module decimator_run_dout_rsci
+# -- Loading module decimator_run_dout_rsci_dout_wait_ctrl
+# -- Loading module decimator_run_staller
+# -- Loading module decimator_run_run_fsm
+# Optimizing 22 design-units (inlining 0/32 module instances, 0/14 systemc instances):
+# -- Optimizing module fir_run_output_rsci_output_wait_ctrl(fast)
+# -- Optimizing module fir_run_staller(fast)
+# -- Optimizing module decimator_run_din_rsci_din_wait_ctrl(fast)
+# -- Optimizing module decimator_run_dout_rsci_dout_wait_ctrl(fast)
+# -- Optimizing module decimator_run_staller(fast)
+# -- Optimizing module fir_run(fast)
+# -- Optimizing module decimator_run(fast)
+# -- Optimizing module fir_run_run_fsm(fast)
+# -- Optimizing module top(fast)
+# -- Optimizing module decimator_run_run_fsm(fast)
+# -- Optimizing module ./Catapult/top.v1/scverify/rtl_v_msim/mgc_hls.ccs_in_wait_v1(fast)
+# -- Optimizing module ./Catapult/top.v1/scverify/rtl_v_msim/mgc_hls.ccs_out_wait_v1(fast)
+# -- Optimizing module ./Catapult/top.v1/scverify/rtl_v_msim/mgc_hls.ccs_in_wait_v1(fast__1)
+# -- Optimizing module ./Catapult/top.v1/scverify/rtl_v_msim/mgc_hls.ccs_out_wait_v1(fast__1)
+# -- Optimizing module fir_run_input_rsci(fast)
+# -- Optimizing module decimator_run_din_rsci(fast)
+# -- Optimizing module fir_run_output_rsci(fast)
+# -- Optimizing module decimator_run_dout_rsci(fast)
+# -- Optimizing module fir(fast)
+# -- Optimizing module ccs_wrapper(fast)
+# -- Optimizing module decimator(fast)
+# -- Optimizing module fir_run_input_rsci_input_wait_ctrl(fast)
+# Optimized design name is scverify_top_opt
+# End time: 17:26:41 on Mar 24,2024, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 1, Suppressed Warnings: 1
+#     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)
+solution new -state new -solution top.v1 top
+# Info: Branching solution 'top.v2' at state 'new' (PRJ-2)
+# top.v2
+go libraries
+# Info: Starting transformation 'analyze' on solution 'top.v2' (SOL-8)
+# Front End called with arguments: -- /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/decimator.h /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/fir.h /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/top.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# $PROJECT_HOME/top.h(23): Pragma 'hls_design<top>' detected on routine 'top::run' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'top.v2': elapsed time 15.07 seconds, memory usage 1647492kB, peak memory usage 1647492kB (SOL-9)
+# Info: Starting transformation 'compile' on solution 'top.v2' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/top.h(9): Found top design routine 'top' specified by directive (CIN-52)
+# $PROJECT_HOME/top.h(20): Inlining member function 'top::top' on object '' (CIN-64)
+# $PROJECT_HOME/fir.h(17): Inlining member function 'fir::fir' on object '' (CIN-64)
+# $PROJECT_HOME/fir.h(23): Synthesizing method 'fir::run' (CIN-13)
+# $PROJECT_HOME/fir.h(23): Inlining member function 'fir::run' on object '' (CIN-64)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator>><19, true>' (CIN-14)
+# $PROJECT_HOME/fir.h(23): Optimizing block '/fir' ... (CIN-4)
+# $PROJECT_HOME/fir.h(23): INOUT port 'input' is only used as an input. (OPT-10)
+# $PROJECT_HOME/fir.h(24): INOUT port 'coeffs' is only used as an input. (OPT-10)
+# $PROJECT_HOME/fir.h(25): INOUT port 'output' is only used as an output. (OPT-11)
+# Info: $PROJECT_HOME/fir.h(17): Partition '/fir/constructor' is found empty and is optimized away. (OPT-12)
+# $PROJECT_HOME/fir.h(28): Loop '/fir/run/SHIFT' iterated at most 8 times. (LOOP-2)
+# $PROJECT_HOME/fir.h(35): Loop '/fir/run/MAC' iterated at most 8 times. (LOOP-2)
+# $PROJECT_HOME/top.h(20): Creating instance '/top/block0' of C Hierarchy 'fir' (CIN-204)
+# $PROJECT_HOME/top.h(20): Creating instance '/top/block1' of C Hierarchy 'fir' (CIN-204)
+# $PROJECT_HOME/decimator.h(17): Inlining member function 'decimator::decimator' on object '' (CIN-64)
+# $PROJECT_HOME/decimator.h(22): Synthesizing method 'decimator::run' (CIN-13)
+# $PROJECT_HOME/decimator.h(22): Inlining member function 'decimator::run' on object '' (CIN-64)
+# $PROJECT_HOME/decimator.h(22): Optimizing block '/decimator' ... (CIN-4)
+# $PROJECT_HOME/decimator.h(22): INOUT port 'din' is only used as an input. (OPT-10)
+# $PROJECT_HOME/decimator.h(23): INOUT port 'dout' is only used as an output. (OPT-11)
+# Info: $PROJECT_HOME/decimator.h(17): Partition '/decimator/constructor' is found empty and is optimized away. (OPT-12)
+# $PROJECT_HOME/top.h(20): Creating instance '/top/block2' of C Hierarchy 'decimator' (CIN-204)
+# $PROJECT_HOME/top.h(24): Synthesizing method 'top::run' (CIN-13)
+# $PROJECT_HOME/top.h(24): Inlining member function 'top::run' on object '' (CIN-64)
+# $PROJECT_HOME/top.h(24): Optimizing block '/top' ... (CIN-4)
+# $PROJECT_HOME/top.h(24): INOUT port 'din' is only used as an input. (OPT-10)
+# $PROJECT_HOME/top.h(25): INOUT port 'coeffs' is only used as an input. (OPT-10)
+# $PROJECT_HOME/top.h(26): INOUT port 'dout' is only used as an output. (OPT-11)
+# Info: $PROJECT_HOME/top.h(20): Partition '/top/constructor' is found empty and is optimized away. (OPT-12)
+# Design 'top' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Warning: Hierarchical design detected - SLEC-CPC does not support design with hierarchy
+# Info: CDesignChecker Shell script written to '/home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v2/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'top.v2': elapsed time 9.88 seconds, memory usage 1647492kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 53, Real ops = 6, Vars = 20 (SOL-21)
+# Info: Starting transformation 'libraries' on solution 'top.v2' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Completed transformation 'libraries' on solution 'top.v2': elapsed time 0.55 seconds, memory usage 1647492kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 53, Real ops = 6, Vars = 20 (SOL-21)
+go assembly
+# Info: Starting transformation 'assembly' on solution 'top.v2' (SOL-8)
+# Info: $PROJECT_HOME/top.h(24): Partition '/top/run' is found empty and is optimized away. (OPT-12)
+# $PROJECT_HOME/top.h(25): Variable '/top/coeffs' connected to multiple blocks (ASM-35)
+# Info: Completed transformation 'assembly' on solution 'top.v2': elapsed time 0.93 seconds, memory usage 1647492kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 53, Real ops = 8, Vars = 23 (SOL-21)
+directive set /top/fir/run/main -PIPELINE_INIT_INTERVAL 1
+# /top/fir/run/main/PIPELINE_INIT_INTERVAL 1
+directive set /top/fir/run/SHIFT -UNROLL yes
+# /top/fir/run/SHIFT/UNROLL yes
+directive set /top/fir/run/MAC -UNROLL yes
+# /top/fir/run/MAC/UNROLL yes
+go allocate
+# Info: Starting transformation 'loops' on solution 'top.v2' (SOL-8)
+# $PROJECT_HOME/decimator.h(22): Loop '/top/decimator/run/main' is left rolled. (LOOP-4)
+# $PROJECT_HOME/fir.h(28): Loop '/top/fir/run/SHIFT' is being fully unrolled (8 times). (LOOP-7)
+# $PROJECT_HOME/fir.h(35): Loop '/top/fir/run/MAC' is being fully unrolled (8 times). (LOOP-7)
+# $PROJECT_HOME/fir.h(23): Loop '/top/fir/run/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'top.v2': elapsed time 0.38 seconds, memory usage 1647492kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 74, Real ops = 12, Vars = 30 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'top.v2' (SOL-8)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'din' (HIER-22)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'input' (HIER-22)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'output' (HIER-22)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'din' (HIER-22)
+# Info: Completed transformation 'memories' on solution 'top.v2': elapsed time 0.25 seconds, memory usage 1647492kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 64, Real ops = 12, Vars = 30 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'top.v2' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'top.v2': elapsed time 0.05 seconds, memory usage 1647492kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 64, Real ops = 12, Vars = 30 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'top.v2' (SOL-8)
+# Design 'top' contains '21' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'top.v2': elapsed time 0.27 seconds, memory usage 1647492kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 101, Real ops = 21, Vars = 37 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'top.v2' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/top/decimator/run' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/decimator.h(22): Prescheduled LOOP '/top/decimator/run/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/decimator.h(22): Prescheduled LOOP '/top/decimator/run/run:rlp' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/decimator.h(22): Prescheduled SEQUENTIAL '/top/decimator/run' (total length 3 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/decimator.h(22): Initial schedule of SEQUENTIAL '/top/decimator/run': Latency = 1, Area (Datapath, Register, Total) = 26.59, 19.15, 45.74 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/decimator.h(22): Final schedule of SEQUENTIAL '/top/decimator/run': Latency = 1, Area (Datapath, Register, Total) = 13.23, 19.15, 32.38 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Performing concurrent resource allocation and scheduling on '/top/fir/run' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/fir.h(23): Prescheduled LOOP '/top/fir/run/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/fir.h(23): Prescheduled LOOP '/top/fir/run/run:rlp' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/fir.h(23): Prescheduled SEQUENTIAL '/top/fir/run' (total length 3 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/fir.h(23): Initial schedule of SEQUENTIAL '/top/fir/run': Latency = 1, Area (Datapath, Register, Total) = 6560.16, 357.50, 6917.67 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/fir.h(23): Final schedule of SEQUENTIAL '/top/fir/run': Latency = 1, Area (Datapath, Register, Total) = 2808.71, 357.50, 3166.21 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'connect0' overriding computed fifo_depth of 1 (HIER-35)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'connect1' overriding computed fifo_depth of 1 (HIER-35)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'top.v2': elapsed time 0.55 seconds, memory usage 1647492kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 101, Real ops = 21, Vars = 37 (SOL-21)
+go extract
+# Info: Starting transformation 'schedule' on solution 'top.v2' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/top/decimator/run' (CRAAS-1)
+# Performing concurrent resource allocation and scheduling on '/top/fir/run' (CRAAS-1)
+# Global signal 'input:rsc.rdy' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Global signal 'input:rsc.vld' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Global signal 'input:rsc.dat' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Info: $PROJECT_HOME/fir.h(30): Creating buffer for wait controller for component 'input:rsc' (SCHD-46)
+# Global signal 'output:rsc.rdy' added to design 'fir' for component 'output:rsci' (LIB-3)
+# Global signal 'output:rsc.vld' added to design 'fir' for component 'output:rsci' (LIB-3)
+# Global signal 'output:rsc.dat' added to design 'fir' for component 'output:rsci' (LIB-3)
+# Global signal 'din:rsc.rdy' added to design 'decimator' for component 'din:rsci' (LIB-3)
+# Global signal 'din:rsc.vld' added to design 'decimator' for component 'din:rsci' (LIB-3)
+# Global signal 'din:rsc.dat' added to design 'decimator' for component 'din:rsci' (LIB-3)
+# Info: $PROJECT_HOME/decimator.h(27): Creating buffer for wait controller for component 'din:rsc' (SCHD-46)
+# Global signal 'dout:rsc.rdy' added to design 'decimator' for component 'dout:rsci' (LIB-3)
+# Global signal 'dout:rsc.vld' added to design 'decimator' for component 'dout:rsci' (LIB-3)
+# Global signal 'dout:rsc.dat' added to design 'decimator' for component 'dout:rsci' (LIB-3)
+# Info: $PROJECT_HOME/fir.h(23): Loop '/top/fir/run/main' is pipelined with initiation interval 1 and no flushing (SCHD-43)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'top.v2': elapsed time 4.80 seconds, memory usage 1646872kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 293, Real ops = 47, Vars = 183 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'top.v2' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Info: Completed transformation 'dpfsm' on solution 'top.v2': elapsed time 0.99 seconds, memory usage 1646872kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 247, Real ops = 69, Vars = 179 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'top.v2' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'top.v2': elapsed time 1.58 seconds, memory usage 1646872kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 247, Real ops = 69, Vars = 228 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'top.v2' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Generating scverify_top.cpp
+# Generating SCVerify ccs_wrapper_top.vhdl
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v2/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v2/concat_sim_rtl.vhdl
+# Generating SCVerify testbench files
+# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Generating SCVerify ccs_wrapper_top.v
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v2/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v2/concat_sim_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'top.v2': elapsed time 10.95 seconds, memory usage 1646872kB, peak memory usage 1647492kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 247, Real ops = 69, Vars = 179 (SOL-21)
+solution select -solution top.v1
+# top.v1
+solution select -solution top.v2
+# top.v2
+go assembly
+directive set /top/decimator/run/main -PIPELINE_INIT_INTERVAL 1
+# Info: Branching solution 'top.v3' at state 'assembly' (PRJ-2)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Warning: Hierarchical design detected - SLEC-CPC does not support design with hierarchy
+# Info: CDesignChecker Shell script written to '/home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v3/CDesignChecker/design_checker.sh'
+# /top/decimator/run/main/PIPELINE_INIT_INTERVAL 1
+go allocate
+# Info: Starting transformation 'loops' on solution 'top.v3' (SOL-8)
+# $PROJECT_HOME/decimator.h(22): Loop '/top/decimator/run/main' is left rolled. (LOOP-4)
+# $PROJECT_HOME/fir.h(28): Loop '/top/fir/run/SHIFT' is being fully unrolled (8 times). (LOOP-7)
+# $PROJECT_HOME/fir.h(35): Loop '/top/fir/run/MAC' is being fully unrolled (8 times). (LOOP-7)
+# $PROJECT_HOME/fir.h(23): Loop '/top/fir/run/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'top.v3': elapsed time 0.38 seconds, memory usage 1712408kB, peak memory usage 1712408kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 74, Real ops = 12, Vars = 30 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'top.v3' (SOL-8)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'din' (HIER-22)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'input' (HIER-22)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'output' (HIER-22)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'din' (HIER-22)
+# Info: Completed transformation 'memories' on solution 'top.v3': elapsed time 0.26 seconds, memory usage 1712408kB, peak memory usage 1712408kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 64, Real ops = 12, Vars = 30 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'top.v3' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'top.v3': elapsed time 0.05 seconds, memory usage 1712408kB, peak memory usage 1712408kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 64, Real ops = 12, Vars = 30 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'top.v3' (SOL-8)
+# Design 'top' contains '21' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'top.v3': elapsed time 0.22 seconds, memory usage 1712408kB, peak memory usage 1712408kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 101, Real ops = 21, Vars = 37 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'top.v3' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/top/decimator/run' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/decimator.h(22): Prescheduled LOOP '/top/decimator/run/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/decimator.h(22): Prescheduled LOOP '/top/decimator/run/run:rlp' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/decimator.h(22): Prescheduled SEQUENTIAL '/top/decimator/run' (total length 3 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/decimator.h(22): Initial schedule of SEQUENTIAL '/top/decimator/run': Latency = 1, Area (Datapath, Register, Total) = 26.59, 19.15, 45.74 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/decimator.h(22): Final schedule of SEQUENTIAL '/top/decimator/run': Latency = 1, Area (Datapath, Register, Total) = 13.23, 19.15, 32.38 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Performing concurrent resource allocation and scheduling on '/top/fir/run' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/fir.h(23): Prescheduled LOOP '/top/fir/run/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/fir.h(23): Prescheduled LOOP '/top/fir/run/run:rlp' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/fir.h(23): Prescheduled SEQUENTIAL '/top/fir/run' (total length 3 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/fir.h(23): Initial schedule of SEQUENTIAL '/top/fir/run': Latency = 1, Area (Datapath, Register, Total) = 6560.16, 357.50, 6917.67 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/fir.h(23): Final schedule of SEQUENTIAL '/top/fir/run': Latency = 1, Area (Datapath, Register, Total) = 2808.71, 357.50, 3166.21 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'connect0' overriding computed fifo_depth of 1 (HIER-35)
+# Info: Applying user-supplied FIFO_DEPTH constraint of 0 to channel 'connect1' overriding computed fifo_depth of 1 (HIER-35)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'top.v3': elapsed time 0.46 seconds, memory usage 1712408kB, peak memory usage 1712408kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 101, Real ops = 21, Vars = 37 (SOL-21)
+solution select -solution top.v2
+# top.v2
+solution select -solution top.v3
+# top.v3
+go extract
+# Info: Starting transformation 'schedule' on solution 'top.v3' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/top/decimator/run' (CRAAS-1)
+# Performing concurrent resource allocation and scheduling on '/top/fir/run' (CRAAS-1)
+# Global signal 'input:rsc.rdy' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Global signal 'input:rsc.vld' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Global signal 'input:rsc.dat' added to design 'fir' for component 'input:rsci' (LIB-3)
+# Info: $PROJECT_HOME/fir.h(30): Creating buffer for wait controller for component 'input:rsc' (SCHD-46)
+# Global signal 'output:rsc.rdy' added to design 'fir' for component 'output:rsci' (LIB-3)
+# Global signal 'output:rsc.vld' added to design 'fir' for component 'output:rsci' (LIB-3)
+# Global signal 'output:rsc.dat' added to design 'fir' for component 'output:rsci' (LIB-3)
+# Global signal 'din:rsc.rdy' added to design 'decimator' for component 'din:rsci' (LIB-3)
+# Global signal 'din:rsc.vld' added to design 'decimator' for component 'din:rsci' (LIB-3)
+# Global signal 'din:rsc.dat' added to design 'decimator' for component 'din:rsci' (LIB-3)
+# Info: $PROJECT_HOME/decimator.h(27): Creating buffer for wait controller for component 'din:rsc' (SCHD-46)
+# Global signal 'dout:rsc.rdy' added to design 'decimator' for component 'dout:rsci' (LIB-3)
+# Global signal 'dout:rsc.vld' added to design 'decimator' for component 'dout:rsci' (LIB-3)
+# Global signal 'dout:rsc.dat' added to design 'decimator' for component 'dout:rsci' (LIB-3)
+# Info: $PROJECT_HOME/decimator.h(22): Loop '/top/decimator/run/main' is pipelined with initiation interval 1 and no flushing (SCHD-43)
+# Info: $PROJECT_HOME/fir.h(23): Loop '/top/fir/run/main' is pipelined with initiation interval 1 and no flushing (SCHD-43)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'top.v3': elapsed time 3.92 seconds, memory usage 1712408kB, peak memory usage 1712408kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 337, Real ops = 62, Vars = 224 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'top.v3' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Info: Completed transformation 'dpfsm' on solution 'top.v3': elapsed time 1.20 seconds, memory usage 1712408kB, peak memory usage 1712408kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 292, Real ops = 85, Vars = 218 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'top.v3' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'top.v3': elapsed time 1.78 seconds, memory usage 1712408kB, peak memory usage 1712408kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 292, Real ops = 85, Vars = 274 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'top.v3' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Generating scverify_top.cpp
+# Generating SCVerify ccs_wrapper_top.vhdl
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v3/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.vhd
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v3/concat_sim_rtl.vhdl
+# Generating SCVerify testbench files
+# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Generating SCVerify ccs_wrapper_top.v
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v3/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# Add dependent file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v3/concat_sim_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'top.v3': elapsed time 11.67 seconds, memory usage 1712408kB, peak memory usage 1712408kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 292, Real ops = 85, Vars = 218 (SOL-21)
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v3'
+#     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/rtl_v_msim'
+# mkdir -p scverify/rtl_v_msim
+# ============================================
+# Setting up default modelsim.ini file from '/usr/mentor/Questa_Sim/cur/questasim/bin/../modelsim.ini'
+# cat "/usr/mentor/Questa_Sim/cur/questasim/bin/../modelsim.ini" >scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/mgc_hls'
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlib scverify/rtl_v_msim/mgc_hls
+# ============================================
+# Mapping logical library 'mgc_hls' to physical path '$SCVLIBS/scverify/rtl_v_msim/mgc_hls'
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vmap mgc_hls \$SCVLIBS/scverify/rtl_v_msim/mgc_hls
+# QuestaSim-64 vmap 2022.3_1 Lib Mapping Utility 2022.08 Aug 12 2022
+# vmap mgc_hls $SCVLIBS/scverify/rtl_v_msim/mgc_hls 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/work'
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlib scverify/rtl_v_msim/work
+# ============================================
+# Mapping logical library 'work' to physical path '$SCVLIBS/scverify/rtl_v_msim/work'
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vmap work \$SCVLIBS/scverify/rtl_v_msim/work
+# QuestaSim-64 vmap 2022.3_1 Lib Mapping Utility 2022.08 Aug 12 2022
+# vmap work $SCVLIBS/scverify/rtl_v_msim/work 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating Questa SIM wave TCL file 'scverify/rtl_v_msim/scverify_msim_wave.tcl' from 'scverify/ccs_wave_signals.dat'
+# /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/bin/tclsh8.5 /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/sif/userware/En_na/flows/app_questasim.flo create_wave_script ./Catapult/top.v3/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult/top.v3/.dut_inst_info.tcl ./Catapult/top.v3/.qwave_signal 
+# app_questasim.flo - Executing command 'create_wave_script ./Catapult/top.v3/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult/top.v3/.dut_inst_info.tcl ./Catapult/top.v3/.qwave_signal'...
+# Wrote Questa SIM waveform creation script to 'scverify/rtl_v_msim/scverify_msim_wave.tcl'
+# ============================================
+# Compiling Verilog file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work mgc_hls     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 17:35:30 on Mar 24,2024
+# vlog -work mgc_hls /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v 
+# -- Compiling module ccs_in_wait_v1
+# 
+# Top level modules:
+# 	ccs_in_wait_v1
+# End time: 17:35:30 on Mar 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work mgc_hls     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 17:35:31 on Mar 24,2024
+# vlog -work mgc_hls /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v 
+# -- Compiling module ccs_out_wait_v1
+# 
+# Top level modules:
+# 	ccs_out_wait_v1
+# End time: 17:35:31 on Mar 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: rtl.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work work     rtl.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 17:35:31 on Mar 24,2024
+# vlog -work work rtl.v 
+# -- Compiling module fir_run_run_fsm
+# -- Compiling module fir_run_staller
+# -- Compiling module fir_run_output_rsci_output_wait_dp
+# -- Compiling module fir_run_output_rsci_output_wait_ctrl
+# -- Compiling module fir_run_input_rsci_input_wait_dp
+# -- Compiling module fir_run_input_rsci_input_wait_ctrl
+# -- Compiling module decimator_run_run_fsm
+# -- Compiling module decimator_run_staller
+# -- Compiling module decimator_run_dout_rsci_dout_wait_dp
+# -- Compiling module decimator_run_dout_rsci_dout_wait_ctrl
+# -- Compiling module decimator_run_din_rsci_din_wait_dp
+# -- Compiling module decimator_run_din_rsci_din_wait_ctrl
+# -- Compiling module fir_run_output_rsci
+# -- Compiling module fir_run_input_rsci
+# -- Compiling module decimator_run_dout_rsci
+# -- Compiling module decimator_run_din_rsci
+# -- Compiling module fir_run
+# -- Compiling module decimator_run
+# -- Compiling module fir
+# -- Compiling module decimator
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 17:35:32 on Mar 24,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: scverify/ccs_wrapper_top.v
+# /usr/mentor/Questa_Sim/cur/questasim/bin/vlog -work work     scverify/ccs_wrapper_top.v
+# QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+# Start time: 17:35:32 on Mar 24,2024
+# vlog -work work scverify/ccs_wrapper_top.v 
+# -- Compiling module ccs_wrapper
+# 
+# Top level modules:
+# 	ccs_wrapper
+# End time: 17:35:32 on Mar 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../top_tb.cpp
+# /usr/mentor/Questa_Sim/cur/questasim/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=top -DCCS_DESIGN_FUNC_top_run -DCCS_DESIGN_TOP_top -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/src -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../top_tb.cpp
+# Start time: 17:35:32 on Mar 24,2024
+# 
+# QuestaSim-64 sccom 2022.3_1 compiler 2022.08 Aug 12 2022
+# End time: 17:35:38 on Mar 24,2024, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/mc_testbench.cpp
+# /usr/mentor/Questa_Sim/cur/questasim/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=top -DCCS_DESIGN_FUNC_top_run -DCCS_DESIGN_TOP_top -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/src -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/mc_testbench.cpp
+# Start time: 17:35:39 on Mar 24,2024
+# 
+# QuestaSim-64 sccom 2022.3_1 compiler 2022.08 Aug 12 2022
+# End time: 17:35:47 on Mar 24,2024, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/scverify_top.cpp
+# /usr/mentor/Questa_Sim/cur/questasim/bin/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas -scpoptions "--c++11" -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG  -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=top -DCCS_DESIGN_FUNC_top_run -DCCS_DESIGN_TOP_top -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -std=gnu++11 -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/src -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/siflibs -I/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/scverify_top.cpp
+# Start time: 17:35:47 on Mar 24,2024
+# 
+# QuestaSim-64 sccom 2022.3_1 compiler 2022.08 Aug 12 2022
+# 
+# Exported modules:
+# 	scverify_top
+# ** Warning: (sccom-6102) The object "_data" is not debuggable. (/home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/shared/include/mc_monitor.h, 144)
+# End time: 17:36:02 on Mar 24,2024, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 1
+# ============================================
+# Linking executable
+# /usr/mentor/Questa_Sim/cur/questasim/bin/sccom -link   
+# sccom -link 
+# Start time: 17:36:02 on Mar 24,2024
+# 
+# QuestaSim-64 sccom 2022.3_1 compiler 2022.08 Aug 12 2022
+# End time: 17:36:04 on Mar 24,2024, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# ============================================
+# Optimizing design: scverify_top
+# cd ../..; /usr/mentor/Questa_Sim/cur/questasim/bin/vopt +acc=anpr    -L "./Catapult/top.v3/scverify/rtl_v_msim/mgc_hls" -L "./Catapult/top.v3/scverify/rtl_v_msim/work"   scverify_top  -o scverify_top_opt
+# QuestaSim-64 vopt 2022.3_1 Compiler 2022.08 Aug 12 2022
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Start time: 17:36:04 on Mar 24,2024
+# vopt "+acc=anpr" -L ./Catapult/top.v3/scverify/rtl_v_msim/mgc_hls -L ./Catapult/top.v3/scverify/rtl_v_msim/work scverify_top -o scverify_top_opt 
+# 
+# Top level modules:
+# 	scverify_top
+# 
+# Analyzing design...
+# -- Loading shared library /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v3/scverify/rtl_v_msim/work/_sc/linux_x86_64_gcc-7.4.0/systemc.so
+# -- Loading systemc module /home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult/top.v3/scverify/rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '10 ns'
+# -- Loading module ccs_wrapper
+# -- Loading module top
+# -- Loading module fir
+# -- Loading module fir_run
+# -- Loading module fir_run_input_rsci
+# -- Loading module ./Catapult/top.v3/scverify/rtl_v_msim/mgc_hls.ccs_in_wait_v1
+# -- Loading module fir_run_input_rsci_input_wait_ctrl
+# -- Loading module fir_run_input_rsci_input_wait_dp
+# -- Loading module fir_run_output_rsci
+# -- Loading module ./Catapult/top.v3/scverify/rtl_v_msim/mgc_hls.ccs_out_wait_v1
+# -- Loading module fir_run_output_rsci_output_wait_ctrl
+# -- Loading module fir_run_output_rsci_output_wait_dp
+# -- Loading module fir_run_staller
+# -- Loading module fir_run_run_fsm
+# -- Loading module decimator
+# -- Loading module decimator_run
+# -- Loading module decimator_run_din_rsci
+# -- Loading module decimator_run_din_rsci_din_wait_ctrl
+# -- Loading module decimator_run_din_rsci_din_wait_dp
+# -- Loading module decimator_run_dout_rsci
+# -- Loading module decimator_run_dout_rsci_dout_wait_ctrl
+# -- Loading module decimator_run_dout_rsci_dout_wait_dp
+# -- Loading module decimator_run_staller
+# -- Loading module decimator_run_run_fsm
+# Optimizing 26 design-units (inlining 0/38 module instances, 0/14 systemc instances):
+# -- Optimizing module fir_run_input_rsci_input_wait_ctrl(fast)
+# -- Optimizing module fir_run_output_rsci_output_wait_ctrl(fast)
+# -- Optimizing module decimator_run_din_rsci_din_wait_ctrl(fast)
+# -- Optimizing module decimator_run_dout_rsci_dout_wait_ctrl(fast)
+# -- Optimizing module fir(fast)
+# -- Optimizing module ccs_wrapper(fast)
+# -- Optimizing module decimator(fast)
+# -- Optimizing module fir_run_staller(fast)
+# -- Optimizing module decimator_run_staller(fast)
+# -- Optimizing module fir_run(fast)
+# -- Optimizing module decimator_run(fast)
+# -- Optimizing module fir_run_input_rsci_input_wait_dp(fast)
+# -- Optimizing module decimator_run_din_rsci_din_wait_dp(fast)
+# -- Optimizing module top(fast)
+# -- Optimizing module fir_run_input_rsci(fast)
+# -- Optimizing module decimator_run_din_rsci(fast)
+# -- Optimizing module fir_run_run_fsm(fast)
+# -- Optimizing module decimator_run_run_fsm(fast)
+# -- Optimizing module fir_run_output_rsci(fast)
+# -- Optimizing module decimator_run_dout_rsci(fast)
+# -- Optimizing module fir_run_output_rsci_output_wait_dp(fast)
+# -- Optimizing module decimator_run_dout_rsci_dout_wait_dp(fast)
+# -- Optimizing module ./Catapult/top.v3/scverify/rtl_v_msim/mgc_hls.ccs_in_wait_v1(fast)
+# -- Optimizing module ./Catapult/top.v3/scverify/rtl_v_msim/mgc_hls.ccs_out_wait_v1(fast)
+# -- Optimizing module ./Catapult/top.v3/scverify/rtl_v_msim/mgc_hls.ccs_in_wait_v1(fast__1)
+# -- Optimizing module ./Catapult/top.v3/scverify/rtl_v_msim/mgc_hls.ccs_out_wait_v1(fast__1)
+# Optimized design name is scverify_top_opt
+# End time: 17:36:06 on Mar 24,2024, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 1, Suppressed Warnings: 1
+#     /home/raid7_4/raid1_1/linux/mentor/Catapult/2023.2/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)
+quit
+# Saving project file '/home/raid7_2/user12/r12016/asoc/lab2/lab1_fir/03_multi_blks/Catapult.ccs'. (PRJ-5)
+// Finish time Sun Mar 24 17:39:23 2024, time elapsed 23:23, peak memory 1.63GB, exit status 0

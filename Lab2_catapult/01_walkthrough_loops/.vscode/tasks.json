@@ -1,0 +1,50 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "g++ build",
+			"command": "/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2023.2_1-1065141/Mgc_home/bin/g++",
+			"args": [
+				"-g",
+				"-std=c++11",
+				"-DCONNECTIONS_ACCURATE_SIM",
+				"-DCONNECTIONS_NAMING_ORIGINAL",
+				"-DSC_INCLUDE_DYNAMIC_PROCESSES",
+				"-Wl,-rpath=/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2023.2_1-1065141/Mgc_home/lib,-rpath=/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2023.2_1-1065141/Mgc_home/shared/lib",
+				"./fir_tb.cpp",
+				"-I/home/mentor/Project/Jiin/labs/lab1_fir/01_walkthrough_loops",
+				"-I/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2023.2_1-1065141/Mgc_home/shared/include",
+				"-L/usr/local/bin/Siemens_EDA/Catapult_Synthesis_2023.2_1-1065141/Mgc_home/shared/lib",
+				"-Wl,-Bstatic",
+				"-lsystemc",
+				"-Wl,-Bdynamic",
+				"-lpthread",
+				"-o",
+				"/home/mentor/Project/Jiin/labs/lab1_fir/01_walkthrough_loops/fir"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "shell",
+			"label": "run",
+			"command": "/home/mentor/Project/Jiin/labs/lab1_fir/01_walkthrough_loops/fir ",
+			"dependsOn": [
+				"g++ build"
+			],
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "trace",
+			"command": "gtkwave trace.vcd",
+			"dependsOn": [
+				"run"
+			],
+			"problemMatcher": []
+		}
+	]
+}

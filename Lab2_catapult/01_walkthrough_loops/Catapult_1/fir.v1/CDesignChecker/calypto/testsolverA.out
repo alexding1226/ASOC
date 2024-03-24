@@ -1,0 +1,4 @@
+Warning: Input file contains 1 objects with non-zero-based ranges.
+For example, signal with range [1:4] is declared in line 2.
+Warning: Input file contains 1 objects with reversed ranges.
+For example, signal with range [1:4] is declared in line 2.

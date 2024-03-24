@@ -1,0 +1,22 @@
+<WRN>[CDB-PHNSL]  Port 'spec.rst' was not connected to any downstream logic, or the original logic has been optimized away.
+<WRN>[TDB-PHNF]   Constraint is applied to port 'spec.rst' which has no fanout.
+<WRN>[CDB-PHNSL]  Port 'spec.rst' was not connected to any downstream logic, or the original logic has been optimized away.
+<WRN>[TDB-PHNF]   Constraint is applied to port 'spec.rst' which has no fanout.
+<WRN>[CTS-SVNF]   Could not find variable(s) 'spec.spec_wrapper::input::rdy'. Corresponding flop map(s) are skipped.
+<WRN>[UI-GWM]     No properties found in the designs to check. Check if appropriate property checking verification mode was used.
+<WRN>[TDB-UBIE]   Unmapped black-box instances exist. Please refer to file '/home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/./CDesignChecker/calypto/bbox.log' for a complete list of unmapped black-box instances.
+                  Please try 'help TDB-UBIE' for more detailed help.
+<WRN>[TDB-UBIP]   Unmapped ports for black-box instances exist. Please refer to file '/home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/./CDesignChecker/calypto/bbox.log' for a complete list of unmapped ports of black-box instances.
+                  Please try 'help TDB-UBIP' for more detailed help.
+<WRN>[TDB-PUP]    Unmapped output/blackbox-input ports have been disconnected by logic pruning and will not show up in any SLEC generated waveforms. Please refer to '/home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/./CDesignChecker/calypto/mapping.log' for the list of unmapped outputs. Please use the global setting 'set_global prune_unmapped_logic 0' to get SLEC to dump these ports in waveforms.
+<WRN>[TDB-DRF]    Some flops have been removed by dead/unmapped logic pruning. Please refer to '/home/raid7_2/user12/r12016/asoc/Catapult_1/fir.v1/./CDesignChecker/calypto/mapping.log' for the list of removed flops.
+<WRN>[SIM-NOX]    Port 'spec.rst' does not support 'x' values and will be set to '0' for reset sequence simulation (see global 'value_on_input_pins_during_reset').
+                  Please try 'help SIM-NOX' for more detailed help.
+<WRN>[SIM-NOX]    Port 'spec.rst' does not support 'x' values and will be set to '0' for reset sequence simulation (see global 'value_on_input_pins_during_reset').
+                  Please try 'help SIM-NOX' for more detailed help.
+<WRN>[SIM-NOX]    Port 'spec.rst' does not support 'x' values and will be set to '0' for reset sequence simulation (see global 'value_on_input_pins_during_reset').
+                  Please try 'help SIM-NOX' for more detailed help.
+<WRN>[SEQ-SRFC]   Map application for intermediate/induct maps was sub-optimal for 1 maps. Please look at the .spec_redux.log file in the work directory for more details.
+14 warning, 0 error messages
+14.131u 1.771s 29.000 0:29.000   77.619m 478.938p
+(SLEC process used 479 MB and 29 seconds)
