@@ -1,1 +1,0 @@
-hostname=cad40.ee.ntu.edu.tw; cpu=16; optimalcpu=16; realtime=29; leak=79; mem=479; verification_mode=c_property_checks; systemc=1; CPC_marker=1; RUN_PROGRAM_marker=2; verilog=1; bd_cpu=14; bd_mem=343; MAPS_INTERMEDIATE_marker=1; SBV_marker=1; TBGEN_FLAT_marker=1; VERIFY_marker=1; VerifyEquivalenceOld_marker=1; PROOF_LEVEL=0; PENMgrNew_marker=1; SPEC_REDUX_marker=1
